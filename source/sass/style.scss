@@ -4,7 +4,7 @@
 
 // Базовые стили
 @use "./base/base.scss";
-@use "./base/fonts.scss";
+@import "./base/fonts.scss";
 
 
 // Стили общих блоков и блоков главной страницы
