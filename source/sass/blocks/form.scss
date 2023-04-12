@@ -1,0 +1,59 @@
+@use "../mixins.scss";
+@use "../variables.scss";
+
+.form__subtitle {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: variables.$titles;
+}
+
+.form__input::placeholder {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: variables.$titles;
+}
+
+.form__list {
+  @include mixins.list-reset;
+}
+
+.form__label {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: variables.$titles-extra;
+}
+
+.form__title {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: variables.$titles;
+}
+
+.form__submit {
+  @include mixins.button;
+}
+
+.form__required {
+font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+text-align: center;
+color: variables.$titles;
+}

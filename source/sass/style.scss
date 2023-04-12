@@ -19,8 +19,11 @@
 @use "./blocks/social.scss";
 
 // Стили каталога
-
 @use "./blocks/products.scss";
-@use "./blocks/show-more.scss"
+@use "./blocks/show-more.scss";
+
+// Стили формы
+@use "./blocks/program-selection.scss";
+@use "./blocks/form.scss";
 
 

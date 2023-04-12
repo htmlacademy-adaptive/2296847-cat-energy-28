@@ -1,0 +1,23 @@
+@use "../mixins.scss";
+@use "../variables.scss";
+
+.program-selection__title {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: variables.$titles;
+  margin: 0;
+}
+
+.program-selection__description {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: variables.$titles;
+  margin: 0;
+}
