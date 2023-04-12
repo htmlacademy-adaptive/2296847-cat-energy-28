@@ -32,21 +32,21 @@ body {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/oswald/oswaldregular.woff2") format("woff2");
+  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  src: url("../../fonts/oswald/oswaldmedium.woff2") format("woff2");
+  src: url("../fonts/oswald/oswaldmedium.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/lato/Lato-Regular.woff2") format("woff2");
+  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2");
   font-display: swap;
 }
 .main-header {
@@ -75,7 +75,7 @@ body {
 }
 
 .promo__background-image {
-  background-image: url("../../img/index-background-cat.jpg");
+  background-image: url("../img/index-background-cat.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -385,7 +385,7 @@ body {
 }
 
 .products__background-image {
-  background-image: url("../../img/catalog-background-cat.jpg");
+  background-image: url("../img/catalog-background-cat.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
