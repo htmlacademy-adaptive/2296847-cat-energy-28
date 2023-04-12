@@ -6,7 +6,7 @@
 }
 
 .promo__background-image {
-  background-image: url(../../img/index-background-cat.jpg);
+  background-image: url("../../img/index-background-cat.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -29,7 +29,7 @@
 }
 
 .promo__title {
-  font-family: 'Oswald';
+  font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -41,17 +41,17 @@
 }
 
 .promo__tagline {
-font-family: 'Oswald';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 14px;
-text-transform: uppercase;
-color: variables.$alternative;
-z-index: 2;
-margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: variables.$alternative;
+  z-index: 2;
+  margin: 0;
 }
 
 .promo__link {
-@include mixins.button;
+  @include mixins.button;
 }
