@@ -1,0 +1,21 @@
+@use "./variables.scss";
+
+@mixin list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin button {
+  background-color: variables.$bb;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: variables.$alternative;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}

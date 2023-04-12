@@ -1,0 +1,40 @@
+@use "../mixins.scss";
+@use "../variables.scss";
+
+.programs__list {
+  @include mixins.list-reset;
+  background-color: variables.$back-alt;
+}
+
+.programs__title {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: variables.$titles;
+  margin: 0;
+}
+
+.programs__description {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: variables.$text;
+  margin: 0;
+}
+
+.programs__link {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: variables.$titles;
+}

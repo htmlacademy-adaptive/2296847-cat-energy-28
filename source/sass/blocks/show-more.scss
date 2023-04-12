@@ -1,0 +1,31 @@
+@use "../mixins.scss";
+@use "../variables.scss";
+
+.show-more__title {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: variables.$titles-alt;
+  margin: 0;
+}
+
+.show-more__description {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: variables.$text;
+  margin: 0;
+}
+
+.show-more__button {
+  @include mixins.button;
+  color: variables.$text;
+  background-color: variables.$back-alt;
+}

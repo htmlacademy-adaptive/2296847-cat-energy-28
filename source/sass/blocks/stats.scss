@@ -1,0 +1,65 @@
+@use "../mixins.scss";
+@use "../variables.scss";
+
+.stats {
+  background-color: variables.$back-alt;
+}
+
+.stats__title {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  color: variables.$titles;
+  margin: 0;
+}
+
+.stats__description {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: variables.$text;
+  margin: 0;
+}
+
+.stst__item {
+  margin: 0;
+}
+
+.stats__number {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: variables.$titles;
+  margin: 0;
+}
+
+.stats__definition {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  text-align: center;
+  color: variables.$text;
+  margin: 0;
+}
+
+.stats__total-price {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: variables.$titles;
+  margin: 0;
+}
