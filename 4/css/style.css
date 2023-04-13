@@ -227,7 +227,7 @@ body {
   margin: 0;
 }
 
-.stst__item {
+.stats__item {
   margin: 0;
 }
 
@@ -283,6 +283,10 @@ body {
   margin: 0;
 }
 
+.contacts--dark {
+  background-color: #f2f2f2;
+}
+
 .contacts__title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -302,10 +306,6 @@ body {
   line-height: 20px;
   color: #444444;
   margin: 0;
-}
-
-.contacts--dark {
-  background-color: #f2f2f2;
 }
 
 .products__main-title {
