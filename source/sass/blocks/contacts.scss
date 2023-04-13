@@ -1,0 +1,27 @@
+@use "../mixins.scss";
+@use "../variables.scss";
+
+.contacts--dark {
+  background-color: variables.$bg;
+}
+
+.contacts__title {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: variables.$titles-alt;
+  margin: 0;
+}
+
+.contacts__description {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: variables.$text;
+  margin: 0;
+}

@@ -1,0 +1,20 @@
+@use "../mixins.scss";
+@use "../variables.scss";
+
+.main-footer__wrapper {
+  background-color: variables.$bg;
+}
+
+.main-footer__copyright {
+  text-decoration: none;
+}
+
+.main-footer__academy-text {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: variables.$text;
+  margin: 0;
+}
