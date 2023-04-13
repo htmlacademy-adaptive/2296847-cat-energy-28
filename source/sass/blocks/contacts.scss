@@ -1,6 +1,10 @@
 @use "../mixins.scss";
 @use "../variables.scss";
 
+.contacts--dark {
+  background-color: variables.$bg;
+}
+
 .contacts__title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -22,6 +26,3 @@
   margin: 0;
 }
 
-.contacts--dark {
-  background-color: variables.$back-alt;
-}

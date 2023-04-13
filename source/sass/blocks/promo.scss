@@ -18,7 +18,7 @@
 
 .promo__background::after {
   content: "";
-  background-color: variables.$back-img;
+  background-color: variables.$bg-alt;
   position: absolute;
   display: block;
   width: 100%;
@@ -35,7 +35,7 @@
   font-size: 36px;
   line-height: 36px;
   text-align: center;
-  color: variables.$alternative;
+  color: variables.$text-alt;
   z-index: 2;
   margin: 0;
 }
@@ -47,7 +47,7 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
-  color: variables.$alternative;
+  color: variables.$text-alt;
   z-index: 2;
   margin: 0;
 }

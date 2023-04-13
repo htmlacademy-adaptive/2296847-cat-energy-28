@@ -3,7 +3,7 @@
 
 .programs__list {
   @include mixins.list-reset;
-  background-color: variables.$back-alt;
+  background-color: variables.$bg;
 }
 
 .programs__title {

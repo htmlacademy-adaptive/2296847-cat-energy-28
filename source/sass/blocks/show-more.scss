@@ -27,5 +27,5 @@
 .show-more__button {
   @include mixins.button;
   color: variables.$text;
-  background-color: variables.$back-alt;
+  background-color: variables.$bg;
 }

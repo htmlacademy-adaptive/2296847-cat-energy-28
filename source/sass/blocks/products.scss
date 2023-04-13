@@ -78,7 +78,7 @@
 
 .products__background::after {
   content: "";
-  background-color: variables.$back-img;
+  background-color: variables.$bg-alt;
   position: absolute;
   display: block;
   width: 100%;
@@ -94,7 +94,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: variables.$alternative;
+  color: variables.$text-alt;
   z-index: 2;
   margin: 0;
 }

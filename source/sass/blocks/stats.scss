@@ -2,7 +2,7 @@
 @use "../variables.scss";
 
 .stats {
-  background-color: variables.$back-alt;
+  background-color: variables.$bg;
 }
 
 .stats__title {
@@ -26,7 +26,7 @@
   margin: 0;
 }
 
-.stst__item {
+.stats__item {
   margin: 0;
 }
 
