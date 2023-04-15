@@ -1,6 +1,35 @@
 @use "../mixins.scss";
 @use "../variables.scss";
 
+@media (min-width: variables.$desktop-width) {
+  .form__wrapper-large {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form__group {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: variables.$tablet-width) {
+  .form__list--extra,
+  .form__wrappper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 61px;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .form__list--extra,
+  .form__wrappper {
+    display: flex;
+    column-gap: 81px;
+  }
+}
+
 .form__subtitle {
   font-family: "Oswald", sans-serif;
   font-style: normal;
