@@ -10,8 +10,75 @@
   margin: 0;
 }
 
+@media (min-width: variables.$desktop-width) {
+  .products__wrapper {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+  }
+}
+
 .products__list {
   @include mixins.list-reset;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .products__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .products__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 63px;
+  }
+}
+
+.products__list--extra {
+  display: flex;
+  flex-direction: column;
+}
+
+.products__card {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .products__card {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.products__card--extra {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .products__card--extra {
+    grid-template-columns: 3fr 3fr 1fr;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .products__card--extra {
+    display: flex;
+  }
+}
+
+.products__card img {
+  grid-column: 1/2;
+  grid-row: 1/5;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .products__card img {
+    grid-column: 1/3;
+  }
 }
 
 .products__subtitle {
@@ -23,6 +90,23 @@
   text-transform: uppercase;
   color: variables.$titles-extra;
   margin: 0;
+  grid-column: 2/4;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .products__subtitle {
+    grid-column: 1/3;
+  }
+}
+
+.products__subtitle--extra {
+  grid-column: 1/3;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .products__subtitle--extra {
+    grid-column: 1/2;
+  }
 }
 
 .products__feature-name {
@@ -49,6 +133,23 @@
 
 .products__button {
   @include mixins.button;
+  grid-column: 1/4;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .products__button {
+    grid-column: 1/3;
+  }
+}
+
+.products__button--extra {
+  grid-column: 1/3;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .products__button--extra {
+    grid-column: 1/4;
+  }
 }
 
 .products__title {
