@@ -1,3 +1,15 @@
+@use "./mixins.scss";
+@use "./variables.scss";
+
 .main-header {
-  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 18px 20px;
+  min-height: 65px;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .main-header__toggle {
+    display: none;
+  }
 }

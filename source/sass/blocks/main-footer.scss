@@ -5,8 +5,17 @@
   background-color: variables.$bg;
 }
 
+@media (min-width: variables.$tablet-width) {
+  .main-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .main-footer__copyright {
   text-decoration: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-footer__academy-text {

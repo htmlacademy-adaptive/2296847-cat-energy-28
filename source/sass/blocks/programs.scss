@@ -1,9 +1,32 @@
 @use "../mixins.scss";
 @use "../variables.scss";
 
+.programs {
+  padding: 0 20px;
+}
+
 .programs__list {
   @include mixins.list-reset;
+}
+
+@media (min-width: variables.$desktop-width) {
+  .programs__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 80px;
+    margin: 0 auto;
+  }
+}
+
+.programs__item {
   background-color: variables.$bg;
+}
+
+@media (min-width: variables.$desktop-width) {
+  .programs__item {
+    width: calc(50% - 40px);
+  }
 }
 
 .programs__title {

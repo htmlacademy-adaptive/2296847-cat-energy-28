@@ -5,6 +5,16 @@
   @include mixins.list-reset;
 }
 
+@media (min-width: variables.$tablet-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 440px;
+    margin: 0 auto;
+  }
+}
+
 .site-list__link {
   color: variables.$titles;
   font-family: "Oswald", sans-serif;
