@@ -33,3 +33,16 @@ body {
   min-height: 100vh;
   margin: 0;
 }
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 31px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 110px;
+  }
+}

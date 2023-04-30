@@ -11,7 +11,7 @@
 }
 
 @media (min-width: variables.$desktop-width) {
-  .products__wrapper {
+  .products__wrapper--extra {
     display: grid;
     grid-template-columns: 4fr 1fr;
   }
@@ -162,34 +162,22 @@
   color: variables.$titles;
 }
 
-.products__background {
+.products__promotion {
   position: relative;
 }
 
-.products__background-image {
-  background-image: url("../img/catalog-background-cat.jpg");
+.products__promotion::before {
+  content: "";
+  background-image: linear-gradient(variables.$bg-alt, variables.$bg-alt), url("../img/catalog-background-cat.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
-
-.products__background::after {
-  content: "";
-  background-color: variables.$bg-alt;
   position: absolute;
-  display: block;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  z-index: -1;
 }
 
-.products__promotion {
+.products__promotion-title {
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;

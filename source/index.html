@@ -12,66 +12,67 @@
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo logo" href="index.html">
-      <img class="logo__image" src="img/logo-mobile-cat.svg" width="34" height="38" alt="Логотип «Кэт энерджи».">
-      <img class="logo__text" src="img/logo-mobile-text.svg" width="101" height="18" alt="">
-    </a>
-    <nav class="main-header__nav">
-      <button class="main-header__toggle toggle toggle--active" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <ul class="main-header__list site-list">
-        <li class="site-list__item site-list__item--current">
-          <a class="site-list__link" href="index.html">Главная</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="form.html">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="main-header__wrapper wrapper">
+      <a class="main-header__logo logo" href="index.html">
+        <img class="logo__image" src="img/logo-mobile-cat.svg" width="34" height="38" alt="Логотип «Кэт энерджи».">
+        <img class="logo__text" src="img/logo-mobile-text.svg" width="101" height="18" alt="">
+      </a>
+      <nav class="main-header__nav">
+        <button class="main-header__toggle toggle toggle--active" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-header__list site-list">
+          <li class="site-list__item site-list__item--current">
+            <a class="site-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="main-container">
     <section class="promo">
-      <div class="promo__background">
-        <div class="promo__background-image">
-          <h1 class="promo__title">
-            Функциональное питание для котов
-          </h1>
-          <p class="promo__tagline">
-            Занялся собой? Займись котом!
-          </p>
-        </div>
-      </div>
-      <img class="promo__product" src="img/index-can.jpg" width="280" height="270" alt="Банка «Кэт энерджи».">
-      <a class="promo__link button" href="form.html">Подобрать программу</a>
+      <div class="promo__wrapper wrapper">
+        <h1 class="promo__title">
+          Функциональное питание для котов
+        </h1>
+        <p class="promo__tagline">
+          Занялся собой? Займись котом!
+        </p>
+        <img class="promo__product" src="img/index-can.jpg" width="280" height="270" alt="Банка «Кэт энерджи».">
+        <a class="promo__link button" href="form.html">Подобрать программу</a>
       </div>
     </section>
     <section class="programs">
-      <h2 class="visually-hidden">Программы для котов</h2>
-      <ul class="programs__list">
-        <li class="programs__item programs__item--slim">
-          <h3 class="programs__title">
-            Похудение
-          </h3>
-          <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
-            Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="programs__link" href="form.html">Каталог slim</a>
-        </li>
-        <li class="programs__item programs__item--pro">
-          <h3 class="programs__title">
-            Набор массы
-          </h3>
-          <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy
-            Pro поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="programs__link" href="form.html">Каталог pro</a>
-        </li>
-      </ul>
+      <div class="programs__wrapper wrapper">
+        <h2 class="visually-hidden">Программы для котов</h2>
+        <ul class="programs__list">
+          <li class="programs__item programs__item--slim">
+            <h3 class="programs__title">
+              Похудение
+            </h3>
+            <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
+              Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <a class="programs__link" href="form.html">Каталог slim</a>
+          </li>
+          <li class="programs__item programs__item--pro">
+            <h3 class="programs__title">
+              Набор массы
+            </h3>
+            <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy
+              Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <a class="programs__link" href="form.html">Каталог pro</a>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="advantages">
-      <div class="advantages__wrapper">
+      <div class="advantages__wrapper wrapper">
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--leaf">
@@ -91,7 +92,7 @@
       </div>
     </section>
     <section class="stats">
-      <div class="stats__wrapper-large">
+      <div class="stats__wrapper wrapper">
         <h2 class="stats__title">Живой пример</h2>
         <p class="stats__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
           Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
@@ -132,7 +133,7 @@
   </main>
   <footer class="main-footer">
     <section class="main-footer__contacts contacts">
-      <div class="contacts__wrapper">
+      <div class="contacts__wrapper wrapper">
         <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
         <address class="contacts__address">
           <p class="contacts__description">ул. Большая Конюшенная, д. 19/8</p>
@@ -141,7 +142,7 @@
       </div>
       <!--тут будет карта-->
     </section>
-    <div class="main-footer__wrapper">
+    <div class="main-footer__wrapper wrapper">
       <a class="main-footer__logo logo" href="index.html">
         <img class="logo__text" src="img/logo-mobile-text.svg" width="128" height="24" alt="Логотип «Кэт энерджи».">
       </a>
