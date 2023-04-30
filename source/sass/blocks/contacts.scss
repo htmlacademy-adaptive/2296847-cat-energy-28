@@ -5,6 +5,12 @@
   background-color: variables.$bg;
 }
 
+.contacts__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: variables.$text-alt;
+}
+
 .contacts__title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -14,6 +20,11 @@
   text-transform: uppercase;
   color: variables.$titles-alt;
   margin: 0;
+}
+
+.contacts__address {
+  display: flex;
+  flex-direction: column;
 }
 
 .contacts__description {

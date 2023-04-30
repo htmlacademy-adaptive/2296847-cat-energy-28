@@ -16,6 +16,22 @@
   @include mixins.list-reset;
 }
 
+@media (min-width: variables.$tablet-width) {
+  .advantages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .advantages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 60px;
+  }
+}
+
 .advantages__description {
   font-family: "Lato", sans-serif;
   font-style: normal;

@@ -1,3 +1,16 @@
-.main-header {
-  padding: 0 20px;
+@use "./mixins.scss";
+@use "./variables.scss";
+
+.main-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 18px;
+  min-height: 65px;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .main-header__toggle {
+    display: none;
+  }
 }

@@ -5,6 +5,20 @@
   background-color: variables.$bg;
 }
 
+@media (min-width: variables.$desktop-width) {
+  .stats__wrapper-large {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .stats__slider {
+    grid-column: 2/3;
+    grid-row: 1/5;
+  }
+}
+
 .stats__title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -24,6 +38,21 @@
   line-height: 18px;
   color: variables.$text;
   margin: 0;
+}
+
+@media (min-width: variables.$tablet-width) and (max-width: variables.$desktop-width) {
+  .stats___wrapper-medium {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.stats__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 32px;
 }
 
 .stats__item {

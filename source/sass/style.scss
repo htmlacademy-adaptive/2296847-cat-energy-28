@@ -8,6 +8,7 @@
 
 
 // Стили общих блоков и блоков главной страницы
+@use "./blocks/main-container.scss";
 @use "./blocks/main-header.scss";
 @use "./blocks/site-list.scss";
 @use "./blocks/promo.scss";
