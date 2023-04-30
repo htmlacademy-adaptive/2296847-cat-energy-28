@@ -32,6 +32,21 @@ body {
   margin: 0;
 }
 
+.wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 0 31px;
+  }
+}
+@media (min-width: 1440px) {
+  .wrapper {
+    padding: 0 110px;
+  }
+}
+
 @font-face {
   font-family: "Oswald";
   font-style: normal;
@@ -57,10 +72,11 @@ body {
   flex-grow: 1;
 }
 
-.main-header {
+.main-header__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px 18px 20px;
+  padding-top: 10px;
+  padding-bottom: 18px;
   min-height: 65px;
 }
 
@@ -95,31 +111,19 @@ body {
   text-decoration: none;
 }
 
-.promo__background {
+.promo {
   position: relative;
 }
 
-.promo__background-image {
-  background-image: url("../img/index-background-cat.jpg");
+.promo::before {
+  content: "";
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/index-background-cat.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
-
-.promo__background::after {
-  content: "";
-  background-color: rgba(104, 183, 56, 0.85);
   position: absolute;
-  display: block;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  z-index: -1;
 }
 
 .promo__title {
@@ -158,6 +162,7 @@ body {
   text-decoration: none;
   border: none;
   cursor: pointer;
+  display: block;
 }
 
 .programs {
@@ -384,6 +389,7 @@ body {
 .contacts__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-color: #ffffff;
 }
 
 .contacts__title {
@@ -422,7 +428,7 @@ body {
 }
 
 @media (min-width: 1440px) {
-  .products__wrapper {
+  .products__wrapper--extra {
     display: grid;
     grid-template-columns: 4fr 1fr;
   }
@@ -574,34 +580,22 @@ body {
   color: #000000;
 }
 
-.products__background {
+.products__promotion {
   position: relative;
 }
 
-.products__background-image {
-  background-image: url("../img/catalog-background-cat.jpg");
+.products__promotion::before {
+  content: "";
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog-background-cat.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
-
-.products__background::after {
-  content: "";
-  background-color: rgba(104, 183, 56, 0.85);
   position: absolute;
-  display: block;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  z-index: -1;
 }
 
-.products__promotion {
+.products__promotion-title {
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
