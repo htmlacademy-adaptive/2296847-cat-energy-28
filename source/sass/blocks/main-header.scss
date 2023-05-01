@@ -4,13 +4,18 @@
 .main-header__wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 10px;
-  padding-bottom: 18px;
-  min-height: 65px;
 }
 
 @media (min-width: variables.$tablet-width) {
   .main-header__toggle {
     display: none;
   }
+}
+
+.main-header__logo {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-right: 54px;
+  padding-bottom: 10px;
 }
