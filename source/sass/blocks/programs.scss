@@ -1,8 +1,10 @@
 @use "../mixins.scss";
 @use "../variables.scss";
 
-.programs {
-  padding: 0 20px;
+.programs__wrapper {
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 82px;
+  }
 }
 
 .programs__list {
@@ -21,11 +23,91 @@
 
 .programs__item {
   background-color: variables.$bg;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 19px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 77px 20px 57px 52px;
+    position: relative;
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: calc(50% - 40px);
+    display: flex;
+    margin-bottom: 0;
+    padding: 41px 61px 59px 52px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
 }
 
-@media (min-width: variables.$desktop-width) {
-  .programs__item {
-    width: calc(50% - 40px);
+.programs__item--slim::before {
+  content: "";
+  background-image: url("../../img/cat-slim.svg");
+  min-width: 50px;
+  min-height: 56px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: 3px;
+  margin-right: 19px;
+  margin-bottom: 22px;
+
+  @media (min-width: variables.$tablet-width) and (max-width: variables.$tablet-width-max) {
+    position: absolute;
+    right: 62px;
+    min-width: 200px;
+    min-height: 211px;
+    margin: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-width: 100px;
+    min-height: 106px;
+    margin-right: 62px;
+    margin-bottom: 39px;
+  }
+}
+
+.programs__item--pro::before {
+  content: "";
+  background-image: url("../../img/cat-pro.svg");
+  min-width: 67px;
+  min-height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: -6px;
+  margin-right: 11px;
+  margin-bottom: 22px;
+
+  @media (min-width: variables.$tablet-width) and (max-width: variables.$tablet-width-max) {
+    position: absolute;
+    right: 28px;
+    min-width: 270px;
+    min-height: 200px;
+    margin: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-width: 134px;
+    min-height: 100px;
+    margin-top: 6px;
+    margin-left: -19px;
+    margin-right: 47px;
+    margin-bottom: 39px;
   }
 }
 
@@ -34,10 +116,17 @@
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
-  line-height: 37px;
+  line-height: 1.54;
   text-transform: uppercase;
   color: variables.$titles;
   margin: 0;
+  align-self: center;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 36px;
+    line-height: 1;
+    padding-bottom: 24px;
+  }
 }
 
 .programs__description {
@@ -45,19 +134,70 @@
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1.29;
   color: variables.$text;
   margin: 0;
+  padding-bottom: 23px;
+  padding-left: 1px;
+  border-bottom: 1px solid variables.$borders-extra;
+
+  @media (min-width: variables.$tablet-width) {
+    border-bottom: none;
+    font-size: 16px;
+    line-height: 1.5;
+    color: variables.$titles;
+    padding-bottom: 52px;
+    max-width: 340px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    max-width: 100%;
+    padding-bottom: 27px;
+  }
 }
 
 .programs__link {
+  position: relative;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   color: variables.$titles;
+  padding: 19px 15px 3px 0;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    border-bottom: none;
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 0;
+  }
+}
+
+.programs__link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 4px;
+  right: -27px;
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 12px;
+
+  &:hover::after {
+    width: 32px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    bottom: 11px;
+    right: -37px;
+  }
 }
