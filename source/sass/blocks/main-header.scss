@@ -1,6 +1,22 @@
 @use "./mixins.scss";
 @use "./variables.scss";
 
+.main-header--index::before {
+  @media (min-width: variables.$desktop-width) {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: calc(100% / 2 - 40px);
+    background-image: linear-gradient(variables.$bg-alt, variables.$bg-alt), url("../img/index-background-cat.jpg");
+    background-repeat: no-repeat;
+    background-position: cover;
+    max-height: 694px;
+  }
+}
+
 .main-header__wrapper {
   display: flex;
   flex-direction: column;
