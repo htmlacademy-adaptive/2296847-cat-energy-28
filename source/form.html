@@ -14,27 +14,29 @@
   <header class="main-header">
     <div class="main-header__wrapper wrapper">
       <a class="main-header__logo logo" href="index.html">
-        <img class="logo__image" src="img/logo-mobile-cat.svg" width="34" height="38" alt="Логотип «Кэт энерджи».">
-        <img class="logo__text" src="img/logo-mobile-text.svg" width="101" height="18" alt="">
+        <img class="main-header__logo-image" src="img/logo-mobile-cat.svg" width="34" height="38"
+          alt="Логотип «Кэт энерджи».">
+        <img class="main-header__logo-text" src="img/logo-mobile-text.svg" width="101" height="18" alt="">
       </a>
-      <nav class="main-header__nav">
+      <nav class="main-header__nav main-header__nav--closed">
         <button class="main-header__toggle toggle toggle--active" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-header__list site-list">
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item">
             <a class="site-list__link" href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="site-list__item site-list__item--current">
-            <a class="site-list__link" href="form.html">Подбор программы</a>
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--current" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
+
   <main class="main-container">
     <section class="main-container__program-selection program-selection">
       <div class="program-selection__wrapper wrapper">
@@ -42,22 +44,25 @@
         <p class="program-selection__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="program-selection__form form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="form__wrapper-large">
-            <fieldset class="form__group">
-              <div>
+
+            <fieldset class="form__group form__group--name">
+              <div class="form__wrapper-small">
                 <label class="form__subtitle" for="form__cat-name-input">Имя:*</label>
                 <input class="form__input" placeholder="Барсик" type="text" name="form__cat-name-input"
                   id="form__cat-name-input" required>
               </div>
-              <div>
+              <div class="form__wrapper-small">
                 <label class="form__subtitle" for="form__cat-weight-input">Вес (кг):*</label>
                 <input class="form__input" placeholder="7" type="text" name="form__cat-weight-input"
                   id="form__cat-weight-input" required>
-                <div>
-                  <label class="form__subtitle" for="form__cat-age-input">Возраст (лет):</label>
-                  <input class="form__input" placeholder="7" type="text" name="form__cat-age-input"
-                    id="form__cat-age-input">
-                </div>
+              </div>
+              <div class="form__wrapper-small">
+                <label class="form__subtitle" for="form__cat-age-input">Возраст (лет):</label>
+                <input class="form__input" placeholder="7" type="text" name="form__cat-age-input"
+                  id="form__cat-age-input">
+              </div>
             </fieldset>
+
             <fieldset class="form__group">
               <legend class="visually-hidden">Цель диеты</legend>
               <ul class="form__list">
@@ -88,24 +93,28 @@
               </ul>
             </fieldset>
           </div>
-          <h2 class="form__title">Контактные данные (владельца кота)</h2>
+
+          <h2 class="form__title form__title--contacts"><span class="form__title-wrapper">Контактные данные (владельца
+              кота)</span></h2>
           <div class="form__wrapper-large">
-            <div>
-              <label class="form__subtitle" for="form__e-mail">E-mail:*</label>
+            <div class="form__wrapper-small form__wrapper-small--contacts">
+              <label class="form__subtitle form__subtitle--contaсts" for="form__e-mail">E-mail:*</label>
               <input class="form__input" placeholder="kuklachev@gmail.com" type="email" name="form__e-mail"
                 id="form__e-mail" required>
             </div>
-            <div>
-              <label class="form__subtitle" for="form__phone">Телефон:*</label>
+            <div class="form__wrapper-small">
+              <label class="form__subtitle form__subtitle--contaсts" for="form__phone">Телефон:*</label>
               <input class="form__input" placeholder="8 (960) 900-60-90" type="tel" name="form__phone" id="form__phone"
                 required>
             </div>
           </div>
-          <h2 class="form__title">Комментарий</h2>
+
+          <h2 class="form__title form__title--comment"><span class="form__title-wrapper">Комментарий</span></h2>
           <label class="visually-hidden" for="form__comment">Введите комментарий</label>
-          <textarea class="form__input" placeholder="Расскажите обо всех повадках кота" id="form__comment"
+          <textarea class="form__input form__input--comment" placeholder="Расскажите обо всех повадках кота" id="form__comment"
             name="form__comment"></textarea>
-          <h2 class="form__title">Дополнительно</h2>
+
+          <h2 class="form__title form__title--more"><span class="form__title-wrapper">Дополнительно</span></h2>
           <fieldset class="form__group">
             <legend class="visually-hidden">Выберите дополнительный товар</legend>
             <ul class="form__list form__list--extra">
@@ -140,6 +149,7 @@
               </li>
             </ul>
           </fieldset>
+
           <div class="form__wrappper">
             <button class="button form__submit" type="submit">Отправить заявку</button>
             <p class="form__required">* — Обязательные поля</p>
@@ -148,6 +158,7 @@
       </div>
     </section>
   </main>
+
   <footer class="main-footer">
     <section class="main-footer__contacts contacts contacts--dark">
       <div class="contacts__wrapper wrapper">

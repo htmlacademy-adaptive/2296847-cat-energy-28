@@ -1,15 +1,34 @@
 @use "../mixins.scss";
 @use "../variables.scss";
 
+.form__group {
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+
+.form__group--name {
+  padding-bottom: 24px;
+}
+
+.form__group--name::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  height: 1px;
+  background-color: variables.$borders;
+  width: 100vw;
+}
+
 @media (min-width: variables.$desktop-width) {
   .form__wrapper-large {
     display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-
-  .form__group {
-    display: flex;
-    flex-direction: column;
   }
 }
 
@@ -30,14 +49,43 @@
   }
 }
 
+.form__wrapper-small {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .form__subtitle {
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 1.12;
   text-transform: uppercase;
   color: variables.$titles;
+  flex-shrink: 0;
+  max-width: 50%;
+  margin-right: 13px;
+}
+
+.form__input {
+  width: 100%;
+  height: 45px;
+  padding: 13px 15px 12px;
+  border: 1px solid variables.$borders-inputs;
+
+  &:hover {
+    border: 1px solid variables.$borders-alt;
+  }
+
+  &:focus {
+    border: 2px solid variables.$text;
+    outline: none;
+  }
+
+  &--invalid {
+    border: 2px solid variables.$invalid;
+  }
 }
 
 .form__input::placeholder {
@@ -45,13 +93,65 @@
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 1.12;
   text-transform: uppercase;
   color: variables.$titles;
 }
 
 .form__list {
   @include mixins.list-reset;
+  padding-top: 22px;
+}
+
+.form__list::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  height: 1px;
+  background-color: variables.$borders;
+  width: 100vw;
+}
+
+.form__item {
+  margin-bottom: 25px;
+}
+
+.form__radio {
+  position: relative;
+}
+
+.form__radio-mark {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid variables.$borders-alt;
+  border-radius: 50%;
+}
+
+.form__radio--input:hover span {
+  border: 1px solid variables.$borders-hover;
+}
+
+.form__radio-input:focus + span {
+  border: 1px solid variables.$borders-hover;
+}
+
+.form__radio-input:disabled ~ span {
+  opacity: 0.3;
+}
+
+.form__radio-input:checked + .form__radio-mark::before {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  left: 8px;
+  top: 8px;
+  background-color: variables.$buttons;
+  border-radius: 50%;
+  content: "";
 }
 
 .form__label {
@@ -59,9 +159,10 @@
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 1.12;
   text-transform: uppercase;
   color: variables.$titles-extra;
+  padding-left: 45px;
 }
 
 .form__title {
@@ -69,12 +170,154 @@
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
-  line-height: 26px;
+  line-height: 1.08;
   color: variables.$titles;
+  margin: 0;
+  display: flex;
+}
+
+.form__title-wrapper {
+  z-index: 2;
+}
+
+.form__title--contacts {
+  margin-top: -6px;
+  padding-top: 26px;
+  padding-bottom: 35px;
+  position: relative;
+  width: 187px;
+}
+
+.form__title--contacts::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 40px;
+  height: 2px;
+  background-color: variables.$bg-alt;
+  width: 100vw;
+}
+
+.form__title--contacts::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 40px;
+  height: 2px;
+  background-color: variables.$text-alt;
+  width: 221px;
+}
+
+.form__subtitle--contaсts {
+  margin-right: 10px;
+}
+
+.form__wrapper-small--contacts {
+  margin-bottom: 14px;
+}
+
+.form__title--comment {
+  padding-top: 23px;
+  padding-bottom: 38px;
+  position: relative;
+  width: 121px;
+}
+
+.form__title--comment::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 40px;
+  height: 2px;
+  background-color: variables.$bg-alt;
+  width: 100vw;
+}
+
+.form__title--comment::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 40px;
+  height: 2px;
+  background-color: variables.$text-alt;
+  width: 163px;
+}
+
+.form__input--comment {
+  height: 150px;
+  padding-right: 10px;
+  resize: none;
+}
+
+.form__title--more {
+  padding-top: 23px;
+  padding-bottom: 34px;
+  position: relative;
+  width: 141px;
+}
+
+.form__title--more::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 40px;
+  height: 2px;
+  background-color: variables.$bg-alt;
+  width: 100vw;
+}
+
+.form__title--more::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 40px;
+  height: 2px;
+  background-color: variables.$text-alt;
+  width: 183px;
+}
+
+.form__checkbox {
+  position: relative;
+}
+
+.form__checkbox-mark {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid variables.$borders-alt;
+}
+
+.form__checkbox-input:hover span {
+  border: 1px solid variables.$borders-hover;
+}
+
+.form__checkbox-input:focus + span {
+  border: 1px solid variables.$borders-hover;
+}
+
+.form__checkbox-input:disabled ~ span {
+  opacity: 0.3;
+}
+
+.form__checkbox-input:checked + .form__checkbox-mark::before {
+  position: absolute;
+  width: 18px;
+  height: 14px;
+  left: 5px;
+  top: 8px;
+  background-image: url("../../img/checkbox.svg");
+  content: "";
 }
 
 .form__submit {
   @include mixins.button;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.25;
+  padding: 7px 0;
+  margin-bottom: 21px;
 }
 
 .form__required {
@@ -86,4 +329,5 @@
   text-align: center;
   color: variables.$titles;
   margin: 0;
+  padding-bottom: 32px;
 }
