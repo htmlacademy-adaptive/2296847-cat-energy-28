@@ -1,43 +1,149 @@
 @use "../mixins.scss";
 @use "../variables.scss";
 
+.advantages__wrapper {
+  padding-bottom: 49px;
+}
+
 .advantages__title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
-  line-height: 40px;
-  text-align: center;
+  line-height: 1.11;
+  text-align: left;
   color: variables.$titles;
   margin: 0;
+  padding: 20px 0;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 60px;
+    line-height: 1;
+    padding-top: 45px;
+    padding-bottom: 72px;
+  }
 }
 
 .advantages__list {
   @include mixins.list-reset;
-}
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 
-@media (min-width: variables.$tablet-width) {
-  .advantages__list {
+  @media (min-width: variables.$tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 37px;
   }
-}
 
-@media (min-width: variables.$desktop-width) {
-  .advantages__list {
+  @media (min-width: variables.$desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 60px;
   }
 }
 
+.advantages__item {
+  display: flex;
+  gap: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    flex-direction: column;
+    gap: 31px;
+    position: relative;
+    min-height: 280px;
+  }
+}
+
+.advantages__item::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: variables.$bg-extra;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.advantages__item--leaf::before {
+  background-image: url("../../img/icon_leaf.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.advantages__item--powder::before {
+  background-image: url("../../img/icon_powder.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.advantages__item--eat::before {
+  background-image: url("../../img/icon_eat.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.advantages__item--timer::before {
+  background-image: url("../../img/icon_timer.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.advantages__item::after {
+  position: absolute;
+  left: 124px;
+  top: -40px;
+  z-index: -1;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 280px;
+  line-height: 1;
+  color: variables.$bg;
+}
+
+.advantages__item--leaf::after {
+  content: "1";
+}
+
+.advantages__item--powder::after {
+  content: "2";
+}
+
+.advantages__item--eat::after {
+  content: "3";
+}
+
+.advantages__item--timer::after {
+  content: "4";
+}
+
+
 .advantages__description {
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1.29;
   color: variables.$text;
   margin: 0;
+  max-width: 200px;
+
+  br {
+    display: none;
+  }
+
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 250px;
+
+    br {
+      display: block;
+    }
+  }
 }
