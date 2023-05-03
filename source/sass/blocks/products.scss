@@ -5,9 +5,25 @@
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
-  line-height: 36px;
+  line-height: 1;
   color: variables.$titles;
   margin: 0;
+  padding-top: 27px;
+  padding-bottom: 41px;
+  position: relative;
+}
+
+@media (max-width: variables.$mobile-width-only) {
+  .products__main-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    height: 1px;
+    background-color: variables.$borders;
+    width: 100vw;
+    box-shadow: -100vw 0 variables.$borders;
+  }
 }
 
 @media (min-width: variables.$desktop-width) {
@@ -46,7 +62,45 @@
 .products__card {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
+  position: relative;
+  padding-top: 19px;
+  padding-bottom: 25px;
 }
+
+.products__image {
+  grid-column: 1/2;
+  grid-row: 1/5;
+  justify-self: center;
+  align-self: center;
+}
+
+@media (max-width: variables.$mobile-width-only) {
+  .products__card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    height: 1px;
+    background-color: variables.$borders;
+    width: 100vw;
+    box-shadow: -100vw 0 variables.$borders;
+  }
+}
+
+
+.products__list--main .products__card:last-child {
+  @media (max-width: variables.$mobile-width-only) {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    height: 1px;
+    background-color: variables.$borders;
+    width: 100vw;
+    box-shadow: -100vw 0 variables.$borders;
+  }
+}
+
 
 @media (min-width: variables.$tablet-width) {
   .products__card {
@@ -70,11 +124,6 @@
   }
 }
 
-.products__card img {
-  grid-column: 1/2;
-  grid-row: 1/5;
-}
-
 @media (min-width: variables.$tablet-width) {
   .products__card img {
     grid-column: 1/3;
@@ -91,6 +140,8 @@
   color: variables.$titles-extra;
   margin: 0;
   grid-column: 2/4;
+  width: 80px;
+  padding-bottom: 14px;
 }
 
 @media (min-width: variables.$tablet-width) {
@@ -115,7 +166,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  text-align: center;
+  text-align: left;
   color: variables.$text;
   margin: 0;
 }
@@ -126,7 +177,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  text-align: center;
+  text-align: right;
   color: variables.$text;
   margin: 0;
 }
@@ -134,6 +185,10 @@
 .products__button {
   @include mixins.button;
   grid-column: 1/4;
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 1.25;
+  padding: 10px 0;
 }
 
 @media (min-width: variables.$tablet-width) {
@@ -157,9 +212,11 @@
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
-  line-height: 24px;
-  text-align: center;
+  line-height: 1;
+  text-align: left;
   color: variables.$titles;
+  padding-top: 25px;
+  padding-bottom: 36px;
 }
 
 .products__promotion {

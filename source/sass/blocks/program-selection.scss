@@ -2,7 +2,7 @@
 @use "../variables.scss";
 
 .program-selection__wrapper {
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: variables.$tablet-width) and (max-width: variables.$tablet-width-max) {
     padding-left: 70px;
     padding-right: 70px;
   }

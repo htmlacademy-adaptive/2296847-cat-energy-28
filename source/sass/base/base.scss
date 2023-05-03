@@ -28,10 +28,15 @@ body {
   font-weight: 400;
   background-color: #ffffff;
   color: #000000;
+  margin: 0;
+}
+
+.page__container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  margin: 0;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .wrapper {

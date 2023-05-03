@@ -55,6 +55,12 @@
   @media (min-width: variables.$desktop-width) {
     font-size: 20px;
     line-height: 1.5;
+  }
+}
+
+.site-list__link--extra {
+  @media (min-width: variables.$desktop-width) {
+
     color: variables.$text-alt;
 
     &:active {
@@ -67,7 +73,9 @@
   @media (min-width: variables.$tablet-width) {
     border-bottom: 2px solid variables.$bg-extra;
   }
+}
 
+.site-list__link--current-index {
   @media (min-width: variables.$desktop-width) {
     border-bottom: 2px solid variables.$text-alt;
   }
