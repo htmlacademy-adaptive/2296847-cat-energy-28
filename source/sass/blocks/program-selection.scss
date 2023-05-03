@@ -1,6 +1,13 @@
 @use "../mixins.scss";
 @use "../variables.scss";
 
+.program-selection__wrapper {
+  @media (min-width: variables.$tablet-width) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
 .program-selection__title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -14,18 +21,23 @@
   position: relative;
 
   @media (min-width: variables.$tablet-width) {
-    
+    font-size: 60px;
+    line-height: 1;
+    padding-top: 65px;
+    padding-bottom: 54px;
   }
 }
 
-.program-selection__title::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -20px;
-  height: 1px;
-  background-color: variables.$borders;
-  width: 100vw;
+@media (max-width: variables.$mobile-width-only) {
+  .program-selection__title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    height: 1px;
+    background-color: variables.$borders;
+    width: 100vw;
+  }
 }
 
 
@@ -39,4 +51,11 @@
   color: variables.$titles;
   margin: 0;
   padding-bottom: 39px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
+    padding-bottom: 66px;
+    width: 330px;
+  }
 }
