@@ -1,2 +1,12 @@
 @use "../mixins.scss";
 @use "../variables.scss";
+
+.social {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid variables.$borders-extra;
+
+  @media (min-width: variables.$tablet-width) {
+    border: none;
+  }
+}

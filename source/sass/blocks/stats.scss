@@ -1,8 +1,26 @@
 @use "../mixins.scss";
 @use "../variables.scss";
 
-.stats {
+.stats__wrapper {
   background-color: variables.$bg;
+
+  @media (min-width: variables.$tablet-width) {
+    background-color: variables.$text-alt;
+    position: relative;
+  }
+}
+
+@media (min-width: variables.$tablet-width) and (max-width: variables.$tablet-width-max) {
+  .stats__wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -31px;
+    height: 1px;
+    background-color: variables.$borders;
+    width: 100vw;
+    box-shadow: -100vw 0 variables.$borders;
+  }
 }
 
 @media (min-width: variables.$desktop-width) {
@@ -30,6 +48,13 @@
   margin: 0;
   padding-top: 25px;
   padding-bottom: 40px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 43px;
+    padding-bottom: 63px;
+    font-size: 60px;
+    line-height: 1;
+  }
 }
 
 .stats__description {
@@ -41,13 +66,17 @@
   color: variables.$text;
   margin: 0;
   padding-bottom: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
-@media (min-width: variables.$tablet-width) and (max-width: variables.$desktop-width) {
-  .stats___wrapper-medium {
+.stats__wrapper-medium {
+  @media (min-width: variables.$tablet-width) {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding-bottom: 242px;
   }
 }
 
@@ -56,6 +85,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   column-gap: 32px;
+
+  @media (min-width: variables.$tablet-width) {
+    column-gap: 42px;
+    margin-right: auto;
+  }
 }
 
 .stats__item {
@@ -80,6 +114,13 @@
   min-height: 56px;
   border: 1px solid variables.$borders-alt;
   border-radius: 3px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+    min-width: 162px;
+    min-height: 72px;
+  }
 }
 
 .stats__definition {
@@ -95,6 +136,12 @@
   width: 87px;
   background-color: variables.$bg;
   z-index: 2;
+
+  @media (min-width: variables.$tablet-width) {
+    background-color: variables.$text-alt;
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .stats__total-price {
@@ -109,8 +156,60 @@
   margin: 0;
   padding-top: 20px;
   padding-bottom: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-.stats__slider {
+.stats__wrapper-slider {
+  background-color: variables.$bg;
   padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.stats__cat-before {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  z-index: 2;
+  overflow: hidden;
+  width: 50%;
+}
+
+.stats__cat-after {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  z-index: 1;
+  max-width: 320px;
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: 560px;
+  }
+}
+
+.stats__range {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  align-self: center;
+  width: 320px;
+  height: 1px;
+  position: relative;
+}
+
+.stats__toggle {
+  position: absolute;
+  left: 120px;
+  top: -20px;
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-image: url("../../img/thumbler.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 5;
 }

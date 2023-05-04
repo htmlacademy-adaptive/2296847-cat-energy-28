@@ -1,6 +1,10 @@
 @use "../mixins.scss";
 @use "../variables.scss";
 
+.contacts {
+  position: relative;
+}
+
 .contacts--dark {
   background-color: variables.$bg;
 }
@@ -9,6 +13,21 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: variables.$text-alt;
+  padding: 26px 20px;
+  position: relative;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    padding: 56px 60px 56px 80px;
+    display: flex;
+  }
 }
 
 .contacts__title {
@@ -20,11 +39,35 @@
   text-transform: uppercase;
   color: variables.$titles-alt;
   margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 1.3;
+    width: 200px;
+    padding-left: 39px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding-left: 0;
+    margin-right: 50px;
+  }
 }
 
 .contacts__address {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-right: 39px;
+    justify-content: space-between;
+    width: 200px;
+    justify-self: end;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-right: 0;
+    width: 175px;
+  }
 }
 
 .contacts__description {
@@ -35,4 +78,30 @@
   line-height: 20px;
   color: variables.$text;
   margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    text-align: left;
+  }
 }
+
+.contacts__map {
+  display: block;
+  border: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 768px;
+    height: 400px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 1440px;
+    height: 400px;
+  }
+}
+
