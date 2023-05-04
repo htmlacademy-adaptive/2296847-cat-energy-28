@@ -1,16 +1,27 @@
 //colors
 
 $titles: #000000;
-$titles-alt:#111111;
+$titles-hover: rgba(0, 0, 0, 0.8);
+$titles-active: rgba(0, 0, 0, 0.6);
+$titles-focus: rgba(0, 0, 0, 0.6);
+$titles-alt: #111111;
 $titles-extra: #222222;
-$buttons:#68b738;
+$buttons: #68b738;
 $bg: #f2f2f2;
-$bg-alt:rgba(104, 183, 56, 0.85);
+$bg-alt: rgba(104, 183, 56, 0.85);
 $bg-extra: #68b738;
-$text:#444444;
+$text: #444444;
 $text-alt: #ffffff;
+$borders: #e6e6e6;
+$borders-alt: #cdcdcd;
+$borders-extra: #d9d9d9;
+$borders-inputs: #e7e7e7;
+$borders-hover: #bababa;
+$invalid: #ff8282;
+
 
 // Viewports
 $tablet-width: 768px;
+$tablet-width-max: 1439px;
 $desktop-width: 1440px;
 $mobile-width-only: 767px;

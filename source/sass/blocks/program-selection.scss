@@ -1,23 +1,61 @@
 @use "../mixins.scss";
 @use "../variables.scss";
 
+.program-selection__wrapper {
+  @media (min-width: variables.$tablet-width) and (max-width: variables.$tablet-width-max) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
 .program-selection__title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
-  line-height: 36px;
+  line-height: 1;
   color: variables.$titles;
   margin: 0;
+  padding-top: 27px;
+  padding-bottom: 37px;
+  position: relative;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 60px;
+    line-height: 1;
+    padding-top: 65px;
+    padding-bottom: 54px;
+  }
 }
+
+@media (max-width: variables.$mobile-width-only) {
+  .program-selection__title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    height: 1px;
+    background-color: variables.$borders;
+    width: 100vw;
+  }
+}
+
 
 .program-selection__description {
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1.29;
   text-transform: uppercase;
   color: variables.$titles;
   margin: 0;
+  padding-bottom: 39px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
+    padding-bottom: 66px;
+    width: 330px;
+  }
 }

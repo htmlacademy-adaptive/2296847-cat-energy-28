@@ -1,6 +1,51 @@
 @use "../mixins.scss";
 @use "../variables.scss";
 
+.show-more {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  position: relative;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 37px;
+    border: 2px solid variables.$bg;
+  }
+}
+
+@media (max-width: variables.$mobile-width-only) {
+  .show-more::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    height: 1px;
+    background-color: variables.$borders;
+    width: 100vw;
+    box-shadow: -100vw 0 variables.$borders;
+  }
+}
+
+.show-more::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url("../../img/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 23px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 49px;
+  }
+}
+
 .show-more__title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -11,6 +56,14 @@
   text-transform: uppercase;
   color: variables.$titles-alt;
   margin: 0;
+  padding-bottom: 8px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 1.1;
+    width: 150px;
+    padding-bottom: 23px;
+  }
 }
 
 .show-more__description {
@@ -22,10 +75,21 @@
   text-align: center;
   color: variables.$text;
   margin: 0;
+  padding-bottom: 21px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 1.12;
+    width: 165px;
+  }
 }
 
 .show-more__button {
   @include mixins.button;
   color: variables.$text;
   background-color: variables.$bg;
+  font-size: 16px;
+  line-height: 1.25;
+  padding: 10px 0;
+  width: 100%;
 }

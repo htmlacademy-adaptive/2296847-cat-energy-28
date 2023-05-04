@@ -3,19 +3,40 @@
 
 .main-footer__wrapper {
   background-color: variables.$bg;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: variables.$tablet-width) {
   .main-footer__wrapper {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
+}
+
+.main-footer__logo {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  width: 100%;
+  border-bottom: 1px solid variables.$borders-extra;
+
+  @media (min-width: variables.$tablet-width) {
+    text-align: left;
+  }
+}
+
+.main-footer__social {
+  align-self: center;
 }
 
 .main-footer__copyright {
   text-decoration: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 47px;
 }
 
 .main-footer__academy-text {
@@ -26,4 +47,9 @@
   line-height: 19px;
   color: variables.$text;
   margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-right: 27px;
+    min-width: 113px;
+  }
 }
