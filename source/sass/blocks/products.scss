@@ -52,7 +52,9 @@
 @media (min-width: variables.$desktop-width) {
   .products__wrapper--extra {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 1fr 250px;
+    column-gap: 80px;
+    padding-bottom: 85px;
   }
 }
 
@@ -86,7 +88,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-  
+    padding: 0;
   }
 }
 
@@ -146,11 +148,18 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    align-items: center;
+    padding: 15px 0 17px 0;
+    outline: none;
+    border-bottom: 1px solid variables.$borders-alt;
+  }
 }
 
 @media (min-width: variables.$desktop-width) {
-  .products__card--extra {
-    display: flex;
+  .products__card--extra:first-child {
+    border-top: 1px solid variables.$borders-alt;
   }
 }
 
@@ -190,6 +199,11 @@
 
   @media (min-width: variables.$tablet-width) {
     margin-right: auto;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-right: auto;
+    text-align: left;
   }
 }
 
@@ -237,12 +251,22 @@
   @media (min-width: variables.$tablet-width) {
     border: none;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 245px;
+  }
 }
 
 .products__feature-value--price {
   @media (min-width: variables.$tablet-width) {
     border: none;
     margin-left: 48px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 80px;
+    text-align: left;
+    margin-left: 0;
   }
 }
 
@@ -266,6 +290,12 @@
 
   @media (min-width: variables.$tablet-width) {
     width: 100%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 244px;
+    margin-left: 40px;
+    margin-top: 0;
   }
 }
 
@@ -309,6 +339,12 @@
     left: -32px;
     top: 50px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    box-shadow: -100vw 0 variables.$bg-alt;
+    left: -110px;
+    top: 50px;
+  }
 }
 
 .products__title::after {
@@ -338,6 +374,11 @@
     flex-direction: row;
     margin-bottom: 76px;
     min-height: 200px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0;
+    min-height: 288px;
   }
 }
 
