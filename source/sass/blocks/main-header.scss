@@ -15,6 +15,10 @@
     background-position: cover;
     max-height: 694px;
   }
+
+  @media (min-width: variables.$desktop-width) and (min-resolution: 2dppx) {
+    background-image: linear-gradient(variables.$bg-alt, variables.$bg-alt), url("../img/index-background-cat-2x.jpg");
+  }
 }
 
 .main-header__wrapper {
