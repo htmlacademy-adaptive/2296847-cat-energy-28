@@ -107,9 +107,10 @@
   font-size: 24px;
   line-height: 1;
   text-align: center;
+  text-transform: uppercase;
   color: variables.$titles;
   margin: 0;
-  padding-top: 15px;
+  padding-top: 14px;
   min-width: 124px;
   min-height: 56px;
   border: 1px solid variables.$borders-alt;
@@ -132,7 +133,9 @@
   text-align: center;
   color: variables.$text;
   margin: 0;
-  margin-top: -10px;
+  margin-top: -9px;
+
+  padding-right: 2px;
   width: 87px;
   background-color: variables.$bg;
   z-index: 2;
@@ -154,7 +157,7 @@
   text-transform: uppercase;
   color: variables.$titles;
   margin: 0;
-  padding-top: 20px;
+  padding-top: 19px;
   padding-bottom: 20px;
 
   @media (min-width: variables.$tablet-width) {
@@ -168,7 +171,7 @@
 
 .stats__wrapper-slider {
   background-color: variables.$bg;
-  padding-bottom: 40px;
+  padding-bottom: 37px;
   display: grid;
   grid-template-columns: 100%;
 }
@@ -178,6 +181,7 @@
   grid-row: 1/-1;
   z-index: 2;
   overflow: hidden;
+  background-color: variables.$bg;
   width: 50%;
 }
 
@@ -186,6 +190,8 @@
   grid-row: 1/-1;
   z-index: 1;
   max-width: 320px;
+  overflow: hidden;
+  background-color: variables.$bg;
 
   @media (min-width: variables.$tablet-width) {
     max-width: 560px;
@@ -196,20 +202,42 @@
   grid-column: 1/-1;
   grid-row: 1/-1;
   align-self: center;
-  width: 320px;
+  width: 280px;
   height: 1px;
   position: relative;
 }
 
 .stats__toggle {
   position: absolute;
-  left: 120px;
-  top: -20px;
+  left: 138px;
+  top: calc(50% - 130px);
+  width: 4px;
+  height: 256px;
+  background-color: variables.$divider;
+  border: none;
+  border-radius: 2px;
+  padding: 0;
+  z-index: 3;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: variables.$buttons;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.stats__toggle::after {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 108px;
   width: 40px;
   height: 40px;
   display: block;
-  background-image: url("../../img/thumbler.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 5;
+  background-color: inherit;
+  mask: url("../../img/thumbler.svg") no-repeat 50% 50%;
 }

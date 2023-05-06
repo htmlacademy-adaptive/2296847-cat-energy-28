@@ -37,7 +37,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
-  padding-bottom: 18px;
+  padding-bottom: 14px;
   width: 100%;
 
   &:hover {
@@ -54,11 +54,16 @@
 
   @media (min-width: variables.$tablet-width) {
     display: block;
+    padding-top: 0;
   }
 }
 
 .main-header__logo-text {
-  margin-top: 14px;
+  margin-top: 2px;
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
 }
 
 .main-header__logo::after {
@@ -84,13 +89,25 @@
   padding: 0;
   background-color: transparent;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (min-width: variables.$tablet-width) {
     display: none;
   }
 }
 
 .main-header__nav .main-header__toggle {
-  top: -42px;
+  top: -46px;
 }
 
 .main-header__nav--closed .main-header__toggle::before {
@@ -102,18 +119,6 @@
   right: 0;
   background-color: variables.$titles;
   mask: url("../img/menu.svg") no-repeat 50% 50%;
-
-  &:hover {
-    background-color: variables.$titles-hover;
-  }
-
-  &:focus {
-    background-color: variables.$titles-focus;
-  }
-
-  &:active {
-    background-color: variables.$titles-active;
-  }
 }
 
 .main-header__nav--opened .main-header__toggle::before {
@@ -125,18 +130,6 @@
   right: 0;
   background-color: variables.$titles;
   mask: url("../img/close.svg") no-repeat 50% 50%;
-
-  &:hover {
-    background-color: variables.$titles-hover;
-  }
-
-  &:focus {
-    background-color: variables.$titles-focus;
-  }
-
-  &:active {
-    background-color: variables.$titles-active;
-  }
 }
 
 @media (max-width: variables.$mobile-width-only) {

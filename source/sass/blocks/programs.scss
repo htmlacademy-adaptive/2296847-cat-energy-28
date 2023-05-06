@@ -57,13 +57,13 @@
   content: "";
   background-image: url("../../img/cat-slim.svg");
   min-width: 50px;
-  min-height: 56px;
+  min-height: 53px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin-top: 2px;
   margin-left: 3px;
   margin-right: 19px;
-  margin-bottom: 22px;
 
   @media (min-width: variables.$tablet-width) and (max-width: variables.$tablet-width-max) {
     position: absolute;
@@ -89,9 +89,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin-top: 5px;
   margin-left: -6px;
   margin-right: 11px;
-  margin-bottom: 22px;
 
   @media (min-width: variables.$tablet-width) and (max-width: variables.$tablet-width-max) {
     position: absolute;
@@ -137,7 +137,8 @@
   line-height: 1.29;
   color: variables.$text;
   margin: 0;
-  padding-bottom: 23px;
+  padding-top: 22px;
+  padding-bottom: 22px;
   padding-left: 1px;
   border-bottom: 1px solid variables.$borders-extra;
 
@@ -173,6 +174,10 @@
     opacity: 0.3;
   }
 
+  &:hover::after {
+    width: 32px;
+  }
+
   @media (min-width: variables.$tablet-width) {
     border-bottom: none;
     font-size: 20px;
@@ -185,16 +190,13 @@
   content: "";
   position: absolute;
   display: block;
-  bottom: 4px;
-  right: -27px;
+  bottom: 5px;
+  right: -26px;
   background-image: url("../img/arrow.svg");
   background-repeat: no-repeat;
+  background-position: right;
   width: 24px;
   height: 12px;
-
-  &:hover::after {
-    width: 32px;
-  }
 
   @media (min-width: variables.$tablet-width) {
     bottom: 11px;

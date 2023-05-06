@@ -14,7 +14,8 @@
   text-align: left;
   color: variables.$titles;
   margin: 0;
-  padding: 20px 0;
+  padding-top: 20px;
+  padding-bottom: 40px;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 60px;
@@ -132,6 +133,7 @@
   color: variables.$text;
   margin: 0;
   max-width: 200px;
+  padding-top: 1px;
 
   br {
     display: none;
