@@ -67,10 +67,12 @@
 
   @media (min-width: variables.$tablet-width) and (max-width: variables.$tablet-width-max) {
     position: absolute;
-    right: 62px;
+    background-image: url("../../img/cat-slim-tablet.svg");
+    right: 61px;
     min-width: 200px;
     min-height: 211px;
     margin: 0;
+    bottom: 80px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -95,8 +97,9 @@
 
   @media (min-width: variables.$tablet-width) and (max-width: variables.$tablet-width-max) {
     position: absolute;
-    right: 28px;
-    min-width: 270px;
+    right: 27px;
+    bottom: 81px;
+    min-width: 269px;
     min-height: 200px;
     margin: 0;
   }
@@ -125,7 +128,6 @@
   @media (min-width: variables.$tablet-width) {
     font-size: 36px;
     line-height: 1;
-    padding-bottom: 24px;
   }
 }
 
@@ -148,6 +150,7 @@
     line-height: 1.5;
     color: variables.$titles;
     padding-bottom: 52px;
+    padding-top: 24px;
     max-width: 340px;
   }
 
@@ -199,7 +202,7 @@
   height: 12px;
 
   @media (min-width: variables.$tablet-width) {
-    bottom: 11px;
-    right: -37px;
+    bottom: 9px;
+    right: -52px;
   }
 }

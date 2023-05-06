@@ -13,6 +13,7 @@
 
   @media (min-width: variables.$tablet-width) {
     border: none;
+    padding: 0;
   }
 }
 
@@ -27,6 +28,16 @@
 .social__link {
   display: block;
   background-color: variables.$divider;
+
+  &:hover,
+  &:focus {
+    background-color: variables.$buttons;
+  }
+
+  &:active {
+    background-color: variables.$buttons;
+    opacity: 0.3;
+  }
 }
 
 .social__link--vkontakte {

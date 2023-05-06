@@ -17,8 +17,7 @@
   position: relative;
 
   @media (min-width: variables.$tablet-width) {
-    padding-top: 56px;
-    padding-bottom: 56px;
+    padding: 60px 70px 60px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -58,10 +57,10 @@
   flex-direction: column;
 
   @media (min-width: variables.$tablet-width) {
-    padding-right: 39px;
     justify-content: space-between;
-    width: 200px;
+    width: 170px;
     justify-self: end;
+    margin-top: -4px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -83,9 +82,10 @@
     font-size: 16px;
     line-height: 20px;
     text-align: right;
+    padding-bottom: 2px;
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: variables.$desktop-width) {
     text-align: left;
   }
 }

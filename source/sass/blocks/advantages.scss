@@ -2,7 +2,7 @@
 @use "../variables.scss";
 
 .advantages__wrapper {
-  padding-bottom: 49px;
+  padding-bottom: 6px;
 }
 
 .advantages__title {
@@ -34,7 +34,8 @@
   @media (min-width: variables.$tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 37px;
+    row-gap: 37px;
+    column-gap: 60px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -96,7 +97,7 @@
 @media (min-width: variables.$tablet-width) {
   .advantages__item::after {
     position: absolute;
-    left: 124px;
+    left: 118px;
     top: -40px;
     z-index: -1;
     font-family: "Oswald", sans-serif;
@@ -109,18 +110,22 @@
 
   .advantages__item--leaf::after {
     content: "1";
+    left: 118px;
   }
 
   .advantages__item--powder::after {
     content: "2";
+    left: 112px;
   }
 
   .advantages__item--eat::after {
     content: "3";
+    left: 112px;
   }
 
   .advantages__item--timer::after {
     content: "4";
+    left: 112px;
   }
 }
 
