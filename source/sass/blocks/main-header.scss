@@ -12,7 +12,7 @@
     width: calc(50%);
     background-image: linear-gradient(variables.$bg-alt, variables.$bg-alt), url("../../img/catalog-background-cat-desktop.jpg");
     background-repeat: no-repeat;
-    background-position: cover;
+    background-size: cover;
     max-height: 694px;
   }
 

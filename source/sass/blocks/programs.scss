@@ -3,7 +3,7 @@
 
 .programs__wrapper {
   @media (min-width: variables.$desktop-width) {
-    padding-top: 82px;
+    padding-top: 71px;
   }
 }
 
@@ -76,10 +76,12 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    min-width: 100px;
-    min-height: 106px;
+    background-image: url("../../img/cat-slim-desktop.svg");
+    width: 100px;
+    height: 106px;
+    margin-top: 0;
+    margin-left: 0;
     margin-right: 62px;
-    margin-bottom: 39px;
   }
 }
 
@@ -105,12 +107,11 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    min-width: 134px;
-    min-height: 100px;
+    width: 135px;
+    height: 100px;
     margin-top: 6px;
     margin-left: -19px;
     margin-right: 47px;
-    margin-bottom: 39px;
   }
 }
 
@@ -156,7 +157,9 @@
 
   @media (min-width: variables.$desktop-width) {
     max-width: 100%;
-    padding-bottom: 27px;
+    padding-bottom: 28px;
+    padding-left: 0;
+    padding-top: 37px;
   }
 }
 

@@ -23,6 +23,10 @@
     padding-top: 45px;
     padding-bottom: 72px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 71px;
+  }
 }
 
 .advantages__list {
@@ -41,7 +45,7 @@
   @media (min-width: variables.$desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 60px;
+    column-gap: 80px;
   }
 }
 

@@ -37,7 +37,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding-left: 80px;
+    padding-left: 190px;
     padding-bottom: 199px;
   }
 }
@@ -66,6 +66,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
+    padding-top: 95px;
     padding-bottom: 40px;
     padding-right: 0;
     max-width: 450px;
@@ -94,10 +95,6 @@
     padding-bottom: 49px;
     padding-left: 2px;
   }
-
-  @media (min-width: variables.$desktop-width) {
-    padding-bottom: 52px;
-  }
 }
 
 .promo__product {
@@ -114,7 +111,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    top: 30px;
+    top: 11px;
     bottom: auto;
     width: 552px;
     height: 499px;
