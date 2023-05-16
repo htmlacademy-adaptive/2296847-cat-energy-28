@@ -26,6 +26,11 @@
     padding-top: 48px;
     padding-bottom: 54px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 58px;
+    padding-bottom: 56px;
+  }
 }
 
 @media (max-width: variables.$mobile-width-only) {
