@@ -81,6 +81,7 @@
   flex-direction: column;
   position: relative;
   padding-bottom: 35px;
+  border-top: 1px solid  variables.$borders;
 
   @media (min-width: variables.$tablet-width) {
     padding-bottom: 69px;
@@ -92,24 +93,11 @@
   }
 }
 
-@media (max-width: variables.$mobile-width-only) {
-  .products__list--extra::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -20px;
-    height: 1px;
-    background-color: variables.$borders;
-    width: 100vw;
-    box-shadow: -100vw 0 variables.$borders;
-  }
-}
-
 .products__card {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   position: relative;
-  padding-top: 19px;
+  padding-top: 20px;
   padding-bottom: 25px;
 
   @media (min-width: variables.$tablet-width) {
@@ -123,7 +111,8 @@
   grid-column: 1/2;
   grid-row: 1/5;
   justify-self: center;
-  align-self: center;
+  align-self: end;
+  margin-bottom: -5px;
 }
 
 @media (max-width: variables.$mobile-width-only) {
@@ -141,6 +130,9 @@
 
 .products__card--extra {
   grid-template-columns: 1fr 1fr;
+  padding-top: 11px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid variables.$borders;
 
   @media (min-width: variables.$tablet-width) {
     background-color: variables.$text-alt;
@@ -155,6 +147,10 @@
     outline: none;
     border-bottom: 1px solid variables.$borders-alt;
   }
+}
+
+.products__card--extra::before {
+  display: none;
 }
 
 @media (min-width: variables.$desktop-width) {
@@ -181,6 +177,7 @@
   grid-column: 2/4;
   width: 80px;
   padding-bottom: 14px;
+  text-decoration: none;
 
   @media (min-width: variables.$tablet-width) {
     grid-column: 1/-1;
@@ -196,6 +193,7 @@
 .products__subtitle--extra {
   grid-column: 1/3;
   width: 150px;
+  padding-bottom: 11px;
 
   @media (min-width: variables.$tablet-width) {
     margin-right: auto;
@@ -247,6 +245,8 @@
 
 .products__feature-value--extra {
   text-align: left;
+  font-size: 14px;
+  line-height: 1;
 
   @media (min-width: variables.$tablet-width) {
     border: none;
@@ -258,6 +258,9 @@
 }
 
 .products__feature-value--price {
+  font-size: 14px;
+  line-height: 1;
+
   @media (min-width: variables.$tablet-width) {
     border: none;
     margin-left: 48px;
@@ -273,7 +276,7 @@
 .products__button {
   @include mixins.button;
   grid-column: 1/4;
-  margin-top: 14px;
+  margin-top: 22px;
   font-size: 16px;
   line-height: 1.25;
   padding: 10px 0;
@@ -287,6 +290,7 @@
 
 .products__button--extra {
   grid-column: 1/3;
+  margin-top: 15px;
 
   @media (min-width: variables.$tablet-width) {
     width: 100%;
@@ -309,6 +313,7 @@
   color: variables.$titles;
   padding-top: 25px;
   padding-bottom: 36px;
+  margin: 0;
   display: flex;
   position: relative;
 
@@ -368,7 +373,7 @@
   min-height: 290px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 
   @media (min-width: variables.$tablet-width) {
     flex-direction: row;
@@ -442,7 +447,7 @@
   color: variables.$text-alt;
   z-index: 2;
   margin: 0;
-  padding: 0 60px;
+  padding: 0 55px;
 
   @media (min-width: variables.$tablet-width) {
     align-self: center;

@@ -92,4 +92,14 @@
   line-height: 1.25;
   padding: 10px 0;
   width: 100%;
+
+  &:hover,
+  &:focus {
+    background-color: variables.$buttons-hover-extra;
+  }
+
+  &:active {
+    background-color: variables.$buttons-hover-extra;
+    color: variables.$buttons-active;
+  }
 }

@@ -34,18 +34,21 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  padding-bottom: 44px;
 
   @media (min-width: variables.$tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 37px;
     column-gap: 60px;
+    padding-bottom: 0;
   }
 
   @media (min-width: variables.$desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
+    padding-bottom: 0;
   }
 }
 
