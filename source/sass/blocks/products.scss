@@ -20,7 +20,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding-top: 74px;
+    padding-top: 60px;
     padding-bottom: 165px;
   }
 }
@@ -52,7 +52,7 @@
 @media (min-width: variables.$desktop-width) {
   .products__wrapper--extra {
     display: grid;
-    grid-template-columns: 1fr 250px;
+    grid-template-columns: 1fr 245px;
     column-gap: 80px;
     padding-bottom: 85px;
   }
@@ -126,6 +126,10 @@
     justify-content: center;
     align-items: flex-end;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    bottom: 206px;
+  }
 }
 
 @media (max-width: variables.$mobile-width-only) {
@@ -159,9 +163,10 @@
 
   @media (min-width: variables.$desktop-width) {
     align-items: center;
-    padding: 15px 0 17px 0;
+    padding: 15px 0;
     outline: none;
     border-bottom: 1px solid variables.$borders-alt;
+    min-height: 72px;
   }
 }
 
@@ -204,6 +209,11 @@
     justify-self: center;
     align-self: center;
   }
+
+  @media (min-width: variables.$tablet-width) {
+    line-height: 21px;
+    padding-left: 10px;
+  }
 }
 
 .products__subtitle--extra {
@@ -216,8 +226,10 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    margin-right: auto;
+    margin-right: 0;
     text-align: left;
+    padding: 0;
+    min-width: 325px;
   }
 }
 
@@ -271,7 +283,8 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    width: 245px;
+    width: 243px;
+    padding: 0;
   }
 }
 
@@ -290,6 +303,7 @@
     width: 80px;
     text-align: left;
     margin-left: 0;
+    padding: 0;
   }
 }
 
@@ -324,8 +338,9 @@
 
   @media (min-width: variables.$desktop-width) {
     width: 244px;
-    margin-left: 40px;
     margin-top: 0;
+    margin-left: auto;
+    padding-bottom: 12px;
   }
 }
 
@@ -348,6 +363,12 @@
     line-height: 1;
     padding-left: 37px;
     padding-top: 68px;
+    padding-bottom: 79px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-left: 0;
+    padding-top: 76px;
     padding-bottom: 79px;
   }
 }
@@ -376,7 +397,7 @@
   @media (min-width: variables.$desktop-width) {
     box-shadow: -100vw 0 variables.$bg-alt;
     left: -110px;
-    top: 50px;
+    top: 98px;
   }
 }
 
@@ -393,6 +414,12 @@
     width: 409px;
     top: 88px;
     left: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 413px;
+    top: 97px;
+    left: -40px;
   }
 }
 
@@ -412,6 +439,8 @@
   @media (min-width: variables.$desktop-width) {
     margin: 0;
     min-height: 288px;
+    flex-direction: column;
+    width: 244px;
   }
 }
 
@@ -467,6 +496,11 @@
     height: 83px;
     background-size: contain;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0;
+    margin-top: 56px;
+  }
 }
 
 .products__promotion-title {
@@ -487,5 +521,11 @@
     padding: 0;
     text-align: left;
     margin-right: 120px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 0;
+    text-align: center;
+    padding-top: 46px;
   }
 }
