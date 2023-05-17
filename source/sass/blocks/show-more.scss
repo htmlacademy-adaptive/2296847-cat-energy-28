@@ -13,6 +13,7 @@
   @media (min-width: variables.$tablet-width) {
     padding: 37px;
     border: 2px solid variables.$bg;
+    justify-content: start;
   }
 }
 
@@ -42,7 +43,10 @@
   @media (min-width: variables.$tablet-width) {
     width: 60px;
     height: 60px;
+    background-size: contain;
+    margin-top: 14px;
     margin-bottom: 49px;
+    background-image: url("../../img/plus-tablet.svg");
   }
 }
 
@@ -81,6 +85,7 @@
     font-size: 16px;
     line-height: 1.12;
     width: 165px;
+    padding-bottom: 87px;
   }
 }
 
