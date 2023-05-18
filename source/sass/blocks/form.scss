@@ -112,6 +112,7 @@
   width: 100%;
   padding: 14px 18px 11px 20px;
   border: 1px solid variables.$borders-inputs;
+  cursor: pointer;
 
   @media (min-width: variables.$tablet-width) {
     padding: 11px 20px 11px 20px;
@@ -345,6 +346,7 @@
 
 .form__subtitle--contaсts {
   margin-right: 10px;
+  position: relative;
 
   @media (min-width: variables.$tablet-width) {
     margin-right: 20px;
@@ -372,26 +374,20 @@
   }
 }
 
-.form__wrapper-small--email::after {
-  content: "";
-  width: 19px;
-  height: 15px;
+.form__icon {
   position: absolute;
+  display: block;
   right: 16px;
   top: calc(50% - 8px);
-  background-color: variables.$titles-extra;
-  mask: url("../img/email.svg") no-repeat 50% 50%;
+  color: variables.$titles-extra;
 }
 
-.form__wrapper-small--tel::before {
-  content: "";
-  width: 19px;
-  height: 15px;
-  position: absolute;
-  right: 16px;
-  top: calc(50% - 8px);
-  background-color: variables.$titles-extra;
-  mask: url("../img/phone.svg") no-repeat 50% 50%;
+.form__input:focus ~ .form__icon {
+  color: variables.$buttons;
+}
+
+.form__input--invalid ~ .form__icon {
+  color: variables.$invalid;
 }
 
 .form__title--comment {
@@ -548,6 +544,7 @@
   width: 30px;
   height: 30px;
   border: 1px solid variables.$borders-alt;
+  cursor: pointer;
 
   @media (min-width: variables.$tablet-width) {
     top: -10px;
