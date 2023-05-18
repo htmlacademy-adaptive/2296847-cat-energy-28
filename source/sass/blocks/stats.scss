@@ -355,7 +355,7 @@
   height: 40px;
   display: block;
   background-color: inherit;
-  mask: url("../../img/thumbler.svg") no-repeat 50% 50%;
+  mask: url("../img/thumbler.svg") no-repeat 50% 50%;
 
   @media (min-width: variables.$tablet-width) {
     top: 236px;
