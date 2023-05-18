@@ -3,6 +3,10 @@
 
 .advantages__wrapper {
   padding-bottom: 6px;
+
+  @media (min-width: variables.$desktop-width) {
+    padding-bottom: 165px;
+  }
 }
 
 .advantages__title {

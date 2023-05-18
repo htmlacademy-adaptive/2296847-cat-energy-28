@@ -1,12 +1,30 @@
 @use "../mixins.scss";
 @use "../variables.scss";
 
+.stats {
+  @media (min-width: variables.$desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-color: variables.$bg;
+  }
+}
+
 .stats__wrapper {
   background-color: variables.$bg-slider;
 
   @media (min-width: variables.$tablet-width) {
     background-color: variables.$text-alt;
     position: relative;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-color: transparent;
+    margin-top: -136px;
+    padding: 0;
+    padding-right: 62px;
   }
 }
 
@@ -23,18 +41,15 @@
   }
 }
 
-@media (min-width: variables.$desktop-width) {
-  .stats__wrapper-large {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 .stats__slider {
   @media (min-width: variables.$tablet-width) {
     background-color: variables.$bg-slider;
     position: relative;
     min-height: 462px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-color: variables.$bg;
   }
 }
 
@@ -56,6 +71,11 @@
     font-size: 60px;
     line-height: 1;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 0;
+    padding-bottom: 146px;
+  }
 }
 
 .stats__description {
@@ -73,12 +93,30 @@
     line-height: 24px;
     padding-bottom: 54px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 436px;
+    padding-bottom: 69px;
+  }
 }
+
+.stats__description br {
+  @media (max-width: variables.$tablet-width-max) {
+    display: none;
+  }
+}
+
 
 .stats__wrapper-medium {
   @media (min-width: variables.$tablet-width) {
     display: flex;
     padding-bottom: 250px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    flex-direction: column;
+    padding-bottom: 75px;
+    width: 436px;
   }
 }
 
@@ -149,6 +187,10 @@
     padding: 0 9px;
     width: auto;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    background-color: variables.$bg;
+  }
 }
 
 .stats__total-price {
@@ -169,9 +211,16 @@
     line-height: 20px;
     text-align: right;
     display: block;
-    flex-direction: column;
     padding-top: 3px;
     padding-bottom: 0;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 47px;
+    width: 327px;
   }
 }
 
@@ -181,7 +230,6 @@
     padding-top: 9px;
   }
 }
-
 
 .stats__wrapper-slider {
   background-color: variables.$bg-slider;
@@ -196,6 +244,12 @@
     bottom: 97px;
     left: 105px;
     background-color: transparent;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0;
+    bottom: 84px;
+    left: 50px;
   }
 }
 
