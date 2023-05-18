@@ -15,12 +15,12 @@
   @media (min-width: variables.$tablet-width) {
     font-size: 60px;
     line-height: 1;
-    padding-top: 65px;
-    padding-bottom: 90px;
+    padding-top: 48px;
+    padding-bottom: 162px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding-top: 74px;
+    padding-top: 60px;
     padding-bottom: 165px;
   }
 }
@@ -52,7 +52,7 @@
 @media (min-width: variables.$desktop-width) {
   .products__wrapper--extra {
     display: grid;
-    grid-template-columns: 1fr 250px;
+    grid-template-columns: 1fr 245px;
     column-gap: 80px;
     padding-bottom: 85px;
   }
@@ -81,6 +81,7 @@
   flex-direction: column;
   position: relative;
   padding-bottom: 35px;
+  border-top: 1px solid  variables.$borders;
 
   @media (min-width: variables.$tablet-width) {
     padding-bottom: 69px;
@@ -92,30 +93,19 @@
   }
 }
 
-@media (max-width: variables.$mobile-width-only) {
-  .products__list--extra::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -20px;
-    height: 1px;
-    background-color: variables.$borders;
-    width: 100vw;
-    box-shadow: -100vw 0 variables.$borders;
-  }
-}
-
 .products__card {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   position: relative;
-  padding-top: 19px;
+  padding-top: 20px;
   padding-bottom: 25px;
 
   @media (min-width: variables.$tablet-width) {
     grid-template-columns: 1fr 1fr;
     background-color: variables.$bg;
-    padding: 38px;
+    padding: 39px;
+    padding-top: 161px;
+    min-height: 430px;
   }
 }
 
@@ -123,7 +113,23 @@
   grid-column: 1/2;
   grid-row: 1/5;
   justify-self: center;
-  align-self: center;
+  align-self: end;
+  margin-bottom: -5px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-column: 1/-1;
+    position: absolute;
+    bottom: 198px;
+    width: 324px;
+    min-height: 208px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    bottom: 206px;
+  }
 }
 
 @media (max-width: variables.$mobile-width-only) {
@@ -141,20 +147,31 @@
 
 .products__card--extra {
   grid-template-columns: 1fr 1fr;
+  padding-top: 11px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid variables.$borders;
 
   @media (min-width: variables.$tablet-width) {
     background-color: variables.$text-alt;
     outline: 1px solid variables.$borders-alt;
     display: flex;
     flex-wrap: wrap;
+    min-height: 139px;
+    padding-top: 20px;
+    padding-bottom: 28px;
   }
 
   @media (min-width: variables.$desktop-width) {
     align-items: center;
-    padding: 15px 0 17px 0;
+    padding: 15px 0;
     outline: none;
     border-bottom: 1px solid variables.$borders-alt;
+    min-height: 72px;
   }
+}
+
+.products__card--extra::before {
+  display: none;
 }
 
 @media (min-width: variables.$desktop-width) {
@@ -181,6 +198,7 @@
   grid-column: 2/4;
   width: 80px;
   padding-bottom: 14px;
+  text-decoration: none;
 
   @media (min-width: variables.$tablet-width) {
     grid-column: 1/-1;
@@ -191,19 +209,27 @@
     justify-self: center;
     align-self: center;
   }
+
+  @media (min-width: variables.$tablet-width) {
+    line-height: 21px;
+    padding-left: 10px;
+  }
 }
 
 .products__subtitle--extra {
   grid-column: 1/3;
   width: 150px;
+  padding-bottom: 11px;
 
   @media (min-width: variables.$tablet-width) {
     margin-right: auto;
   }
 
   @media (min-width: variables.$tablet-width) {
-    margin-right: auto;
+    margin-right: 0;
     text-align: left;
+    padding: 0;
+    min-width: 325px;
   }
 }
 
@@ -247,33 +273,44 @@
 
 .products__feature-value--extra {
   text-align: left;
+  font-size: 14px;
+  line-height: 1;
 
   @media (min-width: variables.$tablet-width) {
     border: none;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    width: 245px;
+    width: 243px;
+    padding: 0;
   }
 }
 
 .products__feature-value--price {
+  font-size: 14px;
+  line-height: 1;
+
   @media (min-width: variables.$tablet-width) {
     border: none;
-    margin-left: 48px;
+    width: 93px;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 80px;
     text-align: left;
     margin-left: 0;
+    padding: 0;
   }
 }
 
 .products__button {
   @include mixins.button;
   grid-column: 1/4;
-  margin-top: 14px;
+  margin-top: 22px;
   font-size: 16px;
   line-height: 1.25;
   padding: 10px 0;
@@ -282,20 +319,28 @@
 @media (min-width: variables.$tablet-width) {
   .products__button {
     grid-column: 1/3;
+    padding-bottom: 10px;
+    margin-top: 29px;
   }
 }
 
 .products__button--extra {
   grid-column: 1/3;
+  margin-top: 15px;
 
   @media (min-width: variables.$tablet-width) {
     width: 100%;
+    margin-top: 5px;
+    padding-top: 12px;
+    padding-bottom: 4px;
+    line-height: 16px;
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 244px;
-    margin-left: 40px;
     margin-top: 0;
+    margin-left: auto;
+    padding-bottom: 12px;
   }
 }
 
@@ -309,6 +354,7 @@
   color: variables.$titles;
   padding-top: 25px;
   padding-bottom: 36px;
+  margin: 0;
   display: flex;
   position: relative;
 
@@ -316,6 +362,14 @@
     font-size: 36px;
     line-height: 1;
     padding-left: 37px;
+    padding-top: 68px;
+    padding-bottom: 79px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-left: 0;
+    padding-top: 76px;
+    padding-bottom: 79px;
   }
 }
 
@@ -337,13 +391,13 @@
   @media (min-width: variables.$tablet-width) {
     box-shadow: -100vw 0 variables.$bg-alt;
     left: -32px;
-    top: 50px;
+    top: 89px;
   }
 
   @media (min-width: variables.$desktop-width) {
     box-shadow: -100vw 0 variables.$bg-alt;
     left: -110px;
-    top: 50px;
+    top: 98px;
   }
 }
 
@@ -358,8 +412,14 @@
 
   @media (min-width: variables.$tablet-width) {
     width: 409px;
-    top: 49px;
+    top: 88px;
     left: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 413px;
+    top: 97px;
+    left: -40px;
   }
 }
 
@@ -368,7 +428,7 @@
   min-height: 290px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 
   @media (min-width: variables.$tablet-width) {
     flex-direction: row;
@@ -379,6 +439,8 @@
   @media (min-width: variables.$desktop-width) {
     margin: 0;
     min-height: 288px;
+    flex-direction: column;
+    width: 244px;
   }
 }
 
@@ -427,8 +489,17 @@
   margin-bottom: 48px;
 
   @media (min-width: variables.$tablet-width) {
-    margin-left: 77px;
+    margin: 0;
+    margin-left: 78px;
     margin-right: auto;
+    width: 80px;
+    height: 83px;
+    background-size: contain;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0;
+    margin-top: 56px;
   }
 }
 
@@ -442,13 +513,19 @@
   color: variables.$text-alt;
   z-index: 2;
   margin: 0;
-  padding: 0 60px;
+  padding: 0 55px;
 
   @media (min-width: variables.$tablet-width) {
     align-self: center;
     width: 165px;
     padding: 0;
     text-align: left;
-    margin-right: 124px;
+    margin-right: 120px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 0;
+    text-align: center;
+    padding-top: 46px;
   }
 }

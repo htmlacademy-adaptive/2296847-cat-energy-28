@@ -4,17 +4,26 @@
 .promo {
   position: relative;
   margin-bottom: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .promo::before {
   content: "";
-  background-image: linear-gradient(variables.$bg-alt, variables.$bg-alt), url("../img/index-background-cat.jpg");
+  background-image: linear-gradient(variables.$bg-alt, variables.$bg-alt), url("../img/index-background-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: cover;
+  background-position: center;
+  background-size: contain;
   position: absolute;
   width: 100%;
   min-height: 302px;
   z-index: -1;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(variables.$bg-alt, variables.$bg-alt), url("../img/index-background-mobile-2x.jpg");
+  }
 
   @media (min-width: variables.$tablet-width) {
     display: none;
@@ -23,12 +32,12 @@
 
 .promo__wrapper {
   @media (min-width: variables.$tablet-width) {
-    padding-left: 91px;
-    padding-bottom: 533px;
+    padding-left: 118px;
+    padding-bottom: 526px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding-left: 80px;
+    padding-left: 190px;
     padding-bottom: 199px;
   }
 }
@@ -52,11 +61,12 @@
     color: variables.$titles;
     padding-right: 137px;
     text-align: left;
-    padding-top: 62px;
+    padding-top: 47px;
     padding-bottom: 41px;
   }
 
   @media (min-width: variables.$desktop-width) {
+    padding-top: 95px;
     padding-bottom: 40px;
     padding-right: 0;
     max-width: 450px;
@@ -83,10 +93,7 @@
     padding-right: 137px;
     text-align: left;
     padding-bottom: 49px;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    padding-bottom: 52px;
+    padding-left: 2px;
   }
 }
 
@@ -104,7 +111,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    top: 30px;
+    top: 11px;
     bottom: auto;
     width: 552px;
     height: 499px;
@@ -123,7 +130,7 @@
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;
     line-height: 1;
-    padding: 14px 26px;
+    padding: 17px 26px;
     width: 244px;
   }
 

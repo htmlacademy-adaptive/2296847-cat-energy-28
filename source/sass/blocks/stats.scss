@@ -1,12 +1,30 @@
 @use "../mixins.scss";
 @use "../variables.scss";
 
+.stats {
+  @media (min-width: variables.$desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-color: variables.$bg;
+  }
+}
+
 .stats__wrapper {
-  background-color: variables.$bg;
+  background-color: variables.$bg-slider;
 
   @media (min-width: variables.$tablet-width) {
     background-color: variables.$text-alt;
     position: relative;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-color: transparent;
+    margin-top: -136px;
+    padding: 0;
+    padding-right: 62px;
   }
 }
 
@@ -15,7 +33,7 @@
     content: "";
     position: absolute;
     top: 0;
-    left: -31px;
+    left: 0;
     height: 1px;
     background-color: variables.$borders;
     width: 100vw;
@@ -23,17 +41,15 @@
   }
 }
 
-@media (min-width: variables.$desktop-width) {
-  .stats__wrapper-large {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.stats__slider {
+  @media (min-width: variables.$tablet-width) {
+    background-color: variables.$bg-slider;
+    position: relative;
+    min-height: 462px;
   }
-}
 
-@media (min-width: variables.$desktop-width) {
-  .stats__slider {
-    grid-column: 2/3;
-    grid-row: 1/5;
+  @media (min-width: variables.$desktop-width) {
+    background-color: variables.$bg;
   }
 }
 
@@ -55,6 +71,11 @@
     font-size: 60px;
     line-height: 1;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 0;
+    padding-bottom: 146px;
+  }
 }
 
 .stats__description {
@@ -70,13 +91,32 @@
   @media (min-width: variables.$tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    padding-bottom: 54px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 436px;
+    padding-bottom: 69px;
   }
 }
+
+.stats__description br {
+  @media (max-width: variables.$tablet-width-max) {
+    display: none;
+  }
+}
+
 
 .stats__wrapper-medium {
   @media (min-width: variables.$tablet-width) {
     display: flex;
-    padding-bottom: 242px;
+    padding-bottom: 250px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    flex-direction: column;
+    padding-bottom: 75px;
+    width: 436px;
   }
 }
 
@@ -107,9 +147,10 @@
   font-size: 24px;
   line-height: 1;
   text-align: center;
+  text-transform: uppercase;
   color: variables.$titles;
   margin: 0;
-  padding-top: 15px;
+  padding-top: 14px;
   min-width: 124px;
   min-height: 56px;
   border: 1px solid variables.$borders-alt;
@@ -132,15 +173,23 @@
   text-align: center;
   color: variables.$text;
   margin: 0;
-  margin-top: -10px;
+  margin-top: -9px;
+  padding: 0 15px;
   width: 87px;
-  background-color: variables.$bg;
+  background-color: variables.$bg-slider;
   z-index: 2;
 
   @media (min-width: variables.$tablet-width) {
+    display: inline-block;
     background-color: variables.$text-alt;
     font-size: 14px;
     line-height: 14px;
+    padding: 0 9px;
+    width: auto;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-color: variables.$bg;
   }
 }
 
@@ -154,41 +203,77 @@
   text-transform: uppercase;
   color: variables.$titles;
   margin: 0;
-  padding-top: 20px;
+  padding-top: 19px;
   padding-bottom: 20px;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;
     line-height: 20px;
     text-align: right;
+    display: block;
+    padding-top: 3px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: variables.$tablet-width) {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 47px;
+    width: 327px;
+  }
+}
+
+.stats__total-price span {
+  @media (min-width: variables.$tablet-width) {
+    display: block;
+    padding-top: 9px;
   }
 }
 
 .stats__wrapper-slider {
-  background-color: variables.$bg;
-  padding-bottom: 40px;
+  background-color: variables.$bg-slider;
+  padding-bottom: 37px;
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: var(--persent, 50%) 1fr;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 560px;
+    padding: 0;
+    position: absolute;
+    bottom: 97px;
+    left: 105px;
+    background-color: transparent;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0;
+    bottom: 84px;
+    left: 50px;
+  }
 }
 
 .stats__cat-before {
-  grid-column: 1/-1;
+  grid-column: 1/2;
   grid-row: 1/-1;
-  z-index: 2;
   overflow: hidden;
-  width: 50%;
+  background-color: variables.$bg-slider;
+
+  @media (min-width: variables.$tablet-width) {
+    background-color: transparent;
+  }
 }
 
 .stats__cat-after {
-  grid-column: 1/-1;
+  grid-column: 2/-1;
   grid-row: 1/-1;
-  z-index: 1;
-  max-width: 320px;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  background-color: variables.$bg-slider;
 
   @media (min-width: variables.$tablet-width) {
-    max-width: 560px;
+    background-color: transparent;
   }
 }
 
@@ -196,20 +281,83 @@
   grid-column: 1/-1;
   grid-row: 1/-1;
   align-self: center;
-  width: 320px;
+  width: 280px;
   height: 1px;
   position: relative;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 560px;
+  }
 }
 
 .stats__toggle {
   position: absolute;
-  left: 120px;
-  top: -20px;
+  left: 138px;
+  top: calc(50% - 130px);
+  width: 4px;
+  height: 256px;
+  background-color: variables.$divider;
+  border: none;
+  border-radius: 2px;
+  padding: 0;
+  z-index: 3;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: variables.$buttons;
+  }
+
+  &:active {
+    background-color: variables.$divider-active;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    height: 512px;
+    left: 278px;
+    top: calc(50% - 258px);
+  }
+}
+
+.stats__toggle::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 108px;
   width: 40px;
   height: 40px;
   display: block;
-  background-image: url("../../img/thumbler.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 5;
+  border-radius: 50%;
+  border: 2px solid variables.$divider;
+  background-color: variables.$text-alt;
+
+  @media (min-width: variables.$tablet-width) {
+    top: 236px;
+  }
+}
+
+.stats__toggle:hover::before,
+.stats__toggle:focus::before {
+  border: 2px solid variables.$buttons;
+}
+
+.stats__toggle:active::before {
+  border: 2px solid variables.$divider-active;
+}
+
+
+.stats__toggle::after {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 108px;
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-color: inherit;
+  mask: url("../../img/thumbler.svg") no-repeat 50% 50%;
+
+  @media (min-width: variables.$tablet-width) {
+    top: 236px;
+  }
 }

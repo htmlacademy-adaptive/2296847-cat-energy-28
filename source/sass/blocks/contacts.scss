@@ -5,10 +5,6 @@
   position: relative;
 }
 
-.contacts--dark {
-  background-color: variables.$bg;
-}
-
 .contacts__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -17,16 +13,23 @@
   position: relative;
 
   @media (min-width: variables.$tablet-width) {
-    padding-top: 56px;
-    padding-bottom: 56px;
+    padding: 60px 70px 60px;
   }
 
   @media (min-width: variables.$desktop-width) {
     position: absolute;
     top: 95px;
     left: 110px;
-    padding: 56px 60px 56px 80px;
+    padding: 60px 60px 60px 80px;
     display: flex;
+  }
+}
+
+.contacts__wrapper--dark {
+  background-color: variables.$bg;
+
+  @media (min-width: variables.$desktop-width) {
+    background-color: variables.$text-alt;
   }
 }
 
@@ -58,10 +61,10 @@
   flex-direction: column;
 
   @media (min-width: variables.$tablet-width) {
-    padding-right: 39px;
     justify-content: space-between;
-    width: 200px;
+    width: 170px;
     justify-self: end;
+    margin-top: -4px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -83,9 +86,10 @@
     font-size: 16px;
     line-height: 20px;
     text-align: right;
+    padding-bottom: 2px;
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: variables.$desktop-width) {
     text-align: left;
   }
 }
@@ -95,13 +99,11 @@
   border: 0;
 
   @media (min-width: variables.$tablet-width) {
-    width: 768px;
+    width: 100%;
     height: 400px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    width: 1440px;
     height: 400px;
   }
 }
-

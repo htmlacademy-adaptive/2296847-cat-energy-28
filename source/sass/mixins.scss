@@ -18,4 +18,16 @@
   text-decoration: none;
   border: none;
   cursor: pointer;
+  display: block;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: variables.$buttons-hover;
+  }
+
+  &:active {
+    background-color: variables.$buttons-hover;
+    color: variables.$text-alt-hover;
+  }
 }
