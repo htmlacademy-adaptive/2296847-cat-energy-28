@@ -2,7 +2,7 @@
 @use "../variables.scss";
 
 .stats__wrapper {
-  background-color: variables.$bg;
+  background-color: variables.$bg-slider;
 
   @media (min-width: variables.$tablet-width) {
     background-color: variables.$text-alt;
@@ -32,7 +32,7 @@
 
 .stats__slider {
   @media (min-width: variables.$tablet-width) {
-    background-color: variables.$bg;
+    background-color: variables.$bg-slider;
     position: relative;
     min-height: 462px;
   }
@@ -138,7 +138,7 @@
   margin-top: -9px;
   padding: 0 15px;
   width: 87px;
-  background-color: variables.$bg;
+  background-color: variables.$bg-slider;
   z-index: 2;
 
   @media (min-width: variables.$tablet-width) {
@@ -184,10 +184,10 @@
 
 
 .stats__wrapper-slider {
-  background-color: variables.$bg;
+  background-color: variables.$bg-slider;
   padding-bottom: 37px;
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: var(--persent, 50%) 1fr;
 
   @media (min-width: variables.$tablet-width) {
     width: 560px;
@@ -200,41 +200,25 @@
 }
 
 .stats__cat-before {
-  grid-column: 1/-1;
+  grid-column: 1/2;
   grid-row: 1/-1;
-  z-index: 2;
   overflow: hidden;
-  background-color: variables.$bg;
-  width: 50%;
-  position: relative;
+  background-color: variables.$bg-slider;
 
   @media (min-width: variables.$tablet-width) {
-    background-color: variables.$text-alt;
-  }
-}
-
-.stats__cat-before::before {
-  @media (min-width: variables.$tablet-width) {
-    content: "";
-    background-color: variables.$text-alt;
-    height: 151px;
-    width: 280px;
-    display: block;
-    position: absolute;
-    top: 151px;
+    background-color: transparent;
   }
 }
 
 .stats__cat-after {
-  grid-column: 1/-1;
+  grid-column: 2/-1;
   grid-row: 1/-1;
-  z-index: 1;
-  max-width: 320px;
+  display: flex;
+  justify-content: flex-end;
   overflow: hidden;
-  background-color: variables.$bg;
+  background-color: variables.$bg-slider;
 
   @media (min-width: variables.$tablet-width) {
-    max-width: 560px;
     background-color: transparent;
   }
 }
@@ -292,6 +276,10 @@
   border-radius: 50%;
   border: 2px solid variables.$divider;
   background-color: variables.$text-alt;
+
+  @media (min-width: variables.$tablet-width) {
+    top: 236px;
+  }
 }
 
 .stats__toggle:hover::before,
