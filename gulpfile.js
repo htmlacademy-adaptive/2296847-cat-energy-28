@@ -4,6 +4,11 @@ import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
+import del from 'del';
+import rename from 'gulp-rename';
+import csso from 'gulp-csso';
+import { stacksvg } from "gulp-stacksvg";
+import squoosh from 'gulp-libsquoosh';
 
 // Styles
 
@@ -12,11 +17,67 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
+
+// Images
+
+const optimizeImages = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+  .pipe(squoosh())
+  .pipe(gulp.dest('build/img'))
+  }
+
+  const copyImages = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+  .pipe(gulp.dest('build/img'))
+  }
+
+  // WebP
+
+  const createWebp = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+  .pipe(squoosh({
+  webp: {}
+  }))
+  .pipe(gulp.dest('build/img'))
+  }
+
+// SVG
+
+export function sprite () {
+  return gulp.src('./source/img/icons/**/*.svg')
+      .pipe(svgo())
+      .pipe(stacksvg({
+          output: 'stack.svg'
+      }))
+      .pipe(gulp.dest('./build/img/'));
+}
+
+// Copy
+
+export const copy = (done) => {
+  gulp.src([
+  'source/fonts/*.{woff2,woff}',
+  'source/*.ico',
+  'source/manifest.webmanifest.json'
+    ], {
+  base: 'source'
+  })
+  .pipe(gulp.dest('build'))
+  done();
+  }
+
+// Clean
+
+const clean = () => {
+  return del ('build');
+  };
 
 // Server
 
