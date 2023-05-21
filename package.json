@@ -12,10 +12,9 @@
     "gulp-dart-sass": "^1.0.2",
     "gulp-libsquoosh": "^1.1.2",
     "gulp-plumber": "1.2.1",
-    "gulp-postcss": "9.0.1",
+    "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-stacksvg": "^2.0.1",
-    "postcss": "8.3.11",
     "stylelint": "13.13.1",
     "stylelint-config-htmlacademy": "0.1.11"
   },
@@ -44,5 +43,8 @@
   "engines": {
     "node": "^16"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "postcss": "^8.4.23"
+  }
 }
