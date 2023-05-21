@@ -50,7 +50,7 @@ const scripts = () => {
 export const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(squoosh())
-  .pipe(gulp.dest('source/img'))
+  .pipe(gulp.dest('build/img'))
   }
 
   const copyImages = () => {
@@ -73,13 +73,13 @@ export const createWebp = () => {
 export const svgOptimize = () => {
   return gulp.src('source/img/**/*.svg')
     .pipe(svgo())
-    .pipe(gulp.dest('build/img/svg'))
+    .pipe(gulp.dest('build/img'))
 }
 
-export const createStack = () => {
-  return gulp.src('source/img/stack/*.svg')
+export const stack = () => {
+  return gulp.src('source/img/icons/*.svg')
     .pipe(svgo())
-    .pipe(stacksvg({ output: 'sprite' }))
+    .pipe(stacksvg({ output: 'stack' }))
     .pipe(gulp.dest('build/img'))
 }
 
@@ -87,16 +87,16 @@ export const createStack = () => {
 
 export const copy = (done) => {
   gulp.src([
-  'source/fonts/*.{woff2,woff}',
-  'source/*.ico',
-  'source/img/favicons/*.*',
-  'source/manifest.webmanifest'
-    ], {
-  base: 'source'
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+    'source/img/favicons/*.*',
+    'source/manifest.webmanifest'
+  ], {
+    base: 'source'
   })
-  .pipe(gulp.dest('build'))
-  done();
-  }
+    .pipe(gulp.dest('build'))
+    done();
+}
 
 // Clean
 
