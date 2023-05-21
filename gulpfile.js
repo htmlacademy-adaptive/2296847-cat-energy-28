@@ -10,7 +10,8 @@ import rename from 'gulp-rename';
 import { stacksvg } from "gulp-stacksvg";
 import squoosh from 'gulp-libsquoosh';
 import htmlmin from 'gulp-htmlmin';
-import svgmin from 'gulp-svgmin';
+import svgo from 'gulp-svgmin';
+import terser from 'gulp-terser';
 
 // Styles
 
@@ -35,12 +36,21 @@ export const html = () => {
     .pipe(gulp.dest('build'))
 }
 
+// Scripts
+
+const scripts = () => {
+  return gulp.src('source/js/*.js')
+    .pipe(terser())
+    .pipe(gulp.dest('build/js'))
+}
+
+
 // Images
 
 export const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(squoosh())
-  .pipe(gulp.dest('build/img'))
+  .pipe(gulp.dest('source/img'))
   }
 
   const copyImages = () => {
@@ -48,9 +58,9 @@ export const optimizeImages = () => {
   .pipe(gulp.dest('build/img'))
   }
 
-  // WebP
+// WebP
 
-  const createWebp = () => {
+export const createWebp = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(squoosh({
   webp: {}
@@ -60,13 +70,17 @@ export const optimizeImages = () => {
 
 // SVG
 
-export function sprite () {
-  return gulp.src('./source/img/icons/**/*.svg')
-      .pipe(svgo())
-      .pipe(stacksvg({
-          output: 'stack.svg'
-      }))
-      .pipe(gulp.dest('./build/img/'));
+export const svgOptimize = () => {
+  return gulp.src('source/img/**/*.svg')
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img/svg'))
+}
+
+export const createStack = () => {
+  return gulp.src('source/img/stack/*.svg')
+    .pipe(svgo())
+    .pipe(stacksvg({ output: 'sprite' }))
+    .pipe(gulp.dest('build/img'))
 }
 
 // Copy
@@ -75,7 +89,8 @@ export const copy = (done) => {
   gulp.src([
   'source/fonts/*.{woff2,woff}',
   'source/*.ico',
-  'source/manifest.webmanifest.json'
+  'source/img/favicons/*.*',
+  'source/manifest.webmanifest'
     ], {
   base: 'source'
   })
@@ -85,7 +100,7 @@ export const copy = (done) => {
 
 // Clean
 
-const clean = () => {
+export const clean = () => {
   return del ('build');
   };
 
