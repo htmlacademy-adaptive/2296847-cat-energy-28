@@ -1,5 +1,5 @@
-@use "./mixins.scss";
-@use "./variables.scss";
+@use "../mixins.scss";
+@use "../variables.scss";
 
 .main-header--index::before {
   @media (min-width: variables.$desktop-width) {
