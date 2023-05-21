@@ -3,12 +3,14 @@ import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
+import csso from 'postcss-csso';
 import browser from 'browser-sync';
 import del from 'del';
 import rename from 'gulp-rename';
-import csso from 'gulp-csso';
 import { stacksvg } from "gulp-stacksvg";
 import squoosh from 'gulp-libsquoosh';
+import htmlmin from 'gulp-htmlmin';
+import svgmin from 'gulp-svgmin';
 
 // Styles
 
@@ -25,9 +27,17 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
+// HTML
+
+export const html = () => {
+  return gulp.src('source/*.html')
+    .pipe(htmlmin( { collapseWhitespace: true }))
+    .pipe(gulp.dest('build'))
+}
+
 // Images
 
-const optimizeImages = () => {
+export const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(squoosh())
   .pipe(gulp.dest('build/img'))
