@@ -383,7 +383,7 @@
 }
 
 .form__input:focus ~ .form__icon {
-  color: variables.$buttons;
+  fill: variables.$buttons;
 }
 
 .form__input--invalid ~ .form__icon {
@@ -572,7 +572,7 @@
   height: 14px;
   left: 5px;
   top: 8px;
-  background-image: url("../img/checkbox.svg");
+  background-image: url("../img/stack.svg#checkbox");
   background-repeat: no-repeat;
   content: "";
 
