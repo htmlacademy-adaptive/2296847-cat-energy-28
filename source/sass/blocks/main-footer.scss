@@ -1,6 +1,10 @@
 @use "../mixins.scss";
 @use "../variables.scss";
 
+.main-footer {
+  background-color: variables.$bg;
+}
+
 .main-footer__wrapper {
   background-color: variables.$bg;
   background-size: 100vw;
@@ -15,6 +19,7 @@
 
   @media (min-width: variables.$desktop-width) {
     padding: 68px 110px;
+    max-width: 1440px;
   }
 }
 

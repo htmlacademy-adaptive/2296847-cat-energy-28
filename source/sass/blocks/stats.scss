@@ -2,6 +2,8 @@
 @use "../variables.scss";
 
 .stats {
+  background-color: variables.$bg-slider;
+
   @media (min-width: variables.$desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -236,6 +238,7 @@
   padding-bottom: 37px;
   display: grid;
   grid-template-columns: var(--persent, 50%) 1fr;
+  width: 320px;
 
   @media (min-width: variables.$tablet-width) {
     width: 560px;

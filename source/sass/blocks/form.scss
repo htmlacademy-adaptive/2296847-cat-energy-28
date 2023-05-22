@@ -59,7 +59,7 @@
 
 @media (min-width: variables.$tablet-width) {
   .form__list--extra,
-  .form__wrappper {
+  .form__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 61px;
@@ -68,7 +68,7 @@
 
 @media (min-width: variables.$desktop-width) {
   .form__list--extra,
-  .form__wrappper {
+  .form__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 81px;
@@ -106,11 +106,11 @@
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.12;
+  line-height: 24px;
   text-transform: uppercase;
   color: variables.$text;
   width: 100%;
-  padding: 14px 18px 11px 20px;
+  padding: 12px 18px 7px 20px;
   border: 1px solid variables.$borders-inputs;
   cursor: pointer;
 
@@ -139,7 +139,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.12;
+  line-height: 24px;
   text-transform: uppercase;
   color: variables.$text;
 
@@ -307,16 +307,16 @@
 .form__title--contacts::before {
   content: "";
   position: absolute;
-  left: -20px;
+  right: -20px;
   top: 41px;
   height: 2px;
   background-color: variables.$bg-alt;
   width: 100vw;
 
   @media (min-width: variables.$tablet-width) {
-    left: -60px;
+    right: 0;
     top: 99px;
-    box-shadow: -100vw 0 variables.$bg-alt;
+    box-shadow: 100vw 0 variables.$bg-alt;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -368,9 +368,13 @@
 
 .form__input--contacts {
   padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 9px;
 
   @media (min-width: variables.$tablet-width) {
     padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 11px;
   }
 }
 
@@ -378,7 +382,7 @@
   position: absolute;
   display: block;
   right: 16px;
-  top: calc(50% - 8px);
+  top: calc(50% - 7px);
   color: variables.$titles-extra;
 }
 
@@ -407,16 +411,16 @@
 .form__title--comment::before {
   content: "";
   position: absolute;
-  left: -20px;
+  right: -20px;
   top: 40px;
   height: 2px;
   background-color: variables.$bg-alt;
   width: 100vw;
 
   @media (min-width: variables.$tablet-width) {
-    left: -60px;
+    right: 0;
     top: 99px;
-    box-shadow: -100vw 0 variables.$bg-alt;
+    box-shadow: 100vw 0 variables.$bg-alt;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -446,7 +450,9 @@
 
 .form__input--comment {
   height: 150px;
-  padding: 12px;
+  padding-top: 6px;
+  padding-left: 14px;
+  padding-right: 10px;
   resize: none;
 
   @media (min-width: variables.$tablet-width) {
@@ -459,6 +465,8 @@
 .form__title--more {
   position: relative;
   width: 141px;
+  margin-top: -4px;
+  margin-bottom: 6px;
 
   @media (min-width: variables.$tablet-width) {
     width: 211px;
@@ -475,16 +483,16 @@
 .form__title--more::before {
   content: "";
   position: absolute;
-  left: -20px;
+  right: 0;
   top: 40px;
   height: 2px;
   background-color: variables.$bg-alt;
   width: 100vw;
 
   @media (min-width: variables.$tablet-width) {
-    left: -60px;
-    top: 99px;
-    box-shadow: -100vw 0 variables.$bg-alt;
+    right: 0;
+    top: 100px;
+    box-shadow: 100vw 0 variables.$bg-alt;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -503,7 +511,7 @@
 
   @media (min-width: variables.$tablet-width) {
     left: -38px;
-    top: 98px;
+    top: 99px;
     width: 292px;
   }
 
@@ -591,7 +599,7 @@
   font-size: 16px;
   line-height: 1.25;
   padding: 10px 0;
-  margin-top: 18px;
+  margin-top: 15px;
   margin-bottom: 21px;
 
   @media (min-width: variables.$tablet-width) {
@@ -599,6 +607,7 @@
     line-height: 26px;
     padding: 13px 0;
     margin-bottom: 0;
+    margin-top: 17px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -627,10 +636,10 @@
   }
 }
 
-.form__wrappper {
+.form__wrapper {
   @media (min-width: variables.$tablet-width) {
     padding-bottom: 72px;
-    padding-top: 22px;
+    padding-top: 24px;
   }
 
   @media (min-width: variables.$desktop-width) {
