@@ -6,7 +6,6 @@ import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import browser from 'browser-sync';
 import del from 'del';
-import rename from 'gulp-rename';
 import { stacksvg } from "gulp-stacksvg";
 import squoosh from 'gulp-libsquoosh';
 import htmlmin from 'gulp-htmlmin';
@@ -75,6 +74,11 @@ const svgOptimize = () => {
     .pipe(gulp.dest('build/img'))
 }
 
+const svgCopy = () => {
+  return gulp.src('source/img/*.svg')
+    .pipe(gulp.dest('build/img'))
+}
+
 const stack = () => {
   return gulp.src('source/img/icons/*.svg')
     .pipe(svgo())
@@ -86,7 +90,7 @@ const stack = () => {
 
 const copy = (done) => {
   gulp.src([
-  'source/fonts/*.{woff2,woff}',
+  'source/fonts/**/*.{woff2,woff}',
   'source/*.ico',
   'source/img/favicons/*.*',
   'source/manifest.webmanifest'
@@ -108,7 +112,7 @@ const clean = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -139,6 +143,7 @@ export const build = gulp.series(
   copy,
   optimizeImages,
   svgOptimize,
+  svgCopy,
   gulp.parallel(
   styles,
   html,
@@ -154,6 +159,7 @@ export default gulp.series(
   clean,
   copy,
   copyImages,
+  svgCopy,
   gulp.parallel(
   styles,
   html,

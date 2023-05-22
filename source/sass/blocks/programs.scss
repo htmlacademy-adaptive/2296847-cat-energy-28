@@ -55,7 +55,7 @@
 
 .programs__item--slim::before {
   content: "";
-  background-image: url("../img/cat-slim.svg");
+  background-image: url("../img/stack.svg#cat-slim");
   min-width: 50px;
   min-height: 53px;
   background-repeat: no-repeat;
@@ -67,7 +67,7 @@
 
   @media (min-width: variables.$tablet-width) and (max-width: variables.$tablet-width-max) {
     position: absolute;
-    background-image: url("../img/cat-slim-tablet.svg");
+    background-image: url("../img/stack.svg#cat-slim-tablet");
     right: 61px;
     min-width: 200px;
     min-height: 211px;
@@ -76,7 +76,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    background-image: url("../img/cat-slim-desktop.svg");
+    background-image: url("../img/stack.svg#cat-slim-desktop");
     width: 100px;
     height: 106px;
     margin-top: 0;
@@ -87,7 +87,7 @@
 
 .programs__item--pro::before {
   content: "";
-  background-image: url("../img/cat-pro.svg");
+  background-image: url("../img/stack.svg#cat-pro");
   min-width: 67px;
   min-height: 50px;
   background-repeat: no-repeat;
@@ -198,7 +198,7 @@
   display: block;
   bottom: 5px;
   right: -26px;
-  background-image: url("../img/arrow.svg");
+  background-image: url("../img/stack.svg#arrow");
   background-repeat: no-repeat;
   background-position: right;
   width: 24px;

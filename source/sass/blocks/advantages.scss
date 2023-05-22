@@ -82,27 +82,31 @@
 }
 
 .advantages__item--leaf::before {
-  background-image: url("../img/icon_leaf.svg");
+  background-image: url("../img/stack.svg#icon_leaf");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 31px 32px;
 }
 
 .advantages__item--powder::before {
-  background-image: url("../img/icon_powder.svg");
+  background-image: url("../img/stack.svg#icon_powder");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 26px 29px;
 }
 
 .advantages__item--eat::before {
-  background-image: url("../img/icon_eat.svg");
+  background-image: url("../img/stack.svg#icon_eat");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 25px 30px;
 }
 
 .advantages__item--timer::before {
-  background-image: url("../img/icon_timer.svg");
+  background-image: url("../img/stack.svg#icon_timer");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 26px 31px;
 }
 
 @media (min-width: variables.$tablet-width) {
