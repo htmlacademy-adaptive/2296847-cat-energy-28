@@ -122,7 +122,7 @@
   top: 0;
   right: 0;
   background-color: variables.$titles;
-  mask: url("../img/menu.svg") no-repeat 50% 50%;
+  mask: url("../img/stack.svg#menu") no-repeat 50% 50%;
 }
 
 .main-header__nav--opened .main-header__toggle::before {
@@ -133,7 +133,7 @@
   top: 0;
   right: 0;
   background-color: variables.$titles;
-  mask: url("../img/close.svg") no-repeat 50% 50%;
+  mask: url("../img/stack.svg#close") no-repeat 50% 50%;
 }
 
 @media (max-width: variables.$mobile-width-only) {

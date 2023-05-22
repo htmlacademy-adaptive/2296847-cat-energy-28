@@ -98,8 +98,17 @@
   display: block;
   border: 0;
   width: 100vw;
+  background-image: url("../img/map-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 
   @media (min-width: variables.$tablet-width) {
     height: 400px;
+    background-image: url("../img/map-tablet.jpg");
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-image: url("../img/map-desktop.jpg");
   }
 }
