@@ -15,7 +15,7 @@
   background-image: linear-gradient(variables.$bg-alt, variables.$bg-alt), url("../img/index-background-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   position: absolute;
   width: 100%;
   min-height: 302px;
@@ -63,6 +63,7 @@
     text-align: left;
     padding-top: 47px;
     padding-bottom: 41px;
+    max-width: 600px;
   }
 
   @media (min-width: variables.$desktop-width) {

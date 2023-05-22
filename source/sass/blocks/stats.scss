@@ -2,11 +2,11 @@
 @use "../variables.scss";
 
 .stats {
+  min-width: 320px;
   background-color: variables.$bg-slider;
 
-  @media (min-width: variables.$desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  @media (min-width: variables.$tablet-width) {
+    background-color: variables.$text-alt;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -14,19 +14,31 @@
   }
 }
 
+.stats__wrapper-large {
+  @media (min-width: variables.$desktop-width) {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 110px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+  }
+}
+
 .stats__wrapper {
   background-color: variables.$bg-slider;
+  padding: 0 20px;
 
   @media (min-width: variables.$tablet-width) {
     background-color: variables.$text-alt;
     position: relative;
+    padding: 0 30px;
   }
 
   @media (min-width: variables.$desktop-width) {
     background-color: transparent;
     margin-top: -136px;
     padding: 0;
-    padding-right: 62px;
   }
 }
 
@@ -35,7 +47,7 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     height: 1px;
     background-color: variables.$borders;
     width: 100vw;
@@ -217,7 +229,7 @@
     padding-bottom: 0;
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: variables.$desktop-width) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -238,21 +250,22 @@
   padding-bottom: 37px;
   display: grid;
   grid-template-columns: var(--persent, 50%) 1fr;
-  width: 320px;
+  width: 280px;
+  margin: 0 auto;
 
   @media (min-width: variables.$tablet-width) {
     width: 560px;
     padding: 0;
     position: absolute;
     bottom: 97px;
-    left: 105px;
+    left: calc(50% - 280px);
     background-color: transparent;
   }
 
   @media (min-width: variables.$desktop-width) {
     margin: 0;
     bottom: 84px;
-    left: 50px;
+    left: calc(50% - 280px);
   }
 }
 
