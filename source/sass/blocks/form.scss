@@ -383,7 +383,7 @@
 }
 
 .form__input:focus ~ .form__icon {
-  background-color: variables.$buttons;
+  color: variables.$buttons;
 }
 
 .form__input--invalid ~ .form__icon {
