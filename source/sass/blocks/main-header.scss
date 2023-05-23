@@ -154,11 +154,13 @@
 
 .main-header__nav--nojs .main-header__toggle {
   display: none;
+}
 
+.main-header__nav--nojs .main-header__list {
   @media (max-width: variables.$mobile-width-only) {
-    .main-header__list {
-      visibility: visible;
-      position: static;
-    }
+    visibility: visible;
+    position: static;
+    display: block;
   }
 }
+

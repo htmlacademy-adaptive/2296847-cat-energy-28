@@ -53,7 +53,7 @@
   flex-direction: column;
 
   @media (min-width: variables.$tablet-width) {
-    row-gap: 35px;
+    row-gap: 23px;
   }
 }
 
@@ -62,7 +62,7 @@
   .form__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 61px;
+    column-gap: 64px;
   }
 }
 
@@ -155,7 +155,12 @@
   @media (min-width: variables.$tablet-width) {
     border: 1px solid variables.$borders-inputs;
     padding: 29px;
-    padding-top: 35px;
+    padding-top: 25px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 29px;
+    padding-top: 29px;
   }
 }
 
@@ -204,7 +209,6 @@
   cursor: pointer;
 
   @media (min-width: variables.$tablet-width) {
-    top: -10px;
     width: 40px;
     height: 40px;
   }
@@ -254,13 +258,18 @@
   color: variables.$titles-extra;
   padding-left: 45px;
   cursor: pointer;
-  width: 280px;
+  min-width: 280px;
+  display: flex;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;
-    line-height: 1.5px;
+    line-height: 1.5;
     padding-left: 60px;
     align-self: end;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 240px;
   }
 }
 
@@ -470,12 +479,12 @@
   @media (min-width: variables.$tablet-width) {
     width: 211px;
     margin-top: -15px;
-    margin-bottom: -9px;
+    margin-bottom: -16px;
   }
 
   @media (min-width: variables.$desktop-width) {
     margin-top: -5px;
-    margin-bottom: -4px;
+    margin-bottom: -12px;
   }
 }
 
@@ -522,7 +531,7 @@
   margin-bottom: 24px;
 
   @media (min-width: variables.$tablet-width) {
-    margin-bottom: 22px;
+    margin-bottom: 18px;
   }
 }
 
@@ -553,7 +562,7 @@
   cursor: pointer;
 
   @media (min-width: variables.$tablet-width) {
-    top: -10px;
+    top: -5px;
     left: 0;
     width: 40px;
     height: 40px;
