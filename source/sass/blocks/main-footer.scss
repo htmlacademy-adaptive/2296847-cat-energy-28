@@ -73,11 +73,12 @@
 .main-footer__copyright {
   text-decoration: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   padding-top: 20px;
   padding-bottom: 47px;
   border-top: 1px solid variables.$borders-extra;
+
 
   &:active {
     opacity: 0.3;
@@ -114,8 +115,10 @@
   line-height: 19px;
   color: variables.$text;
   margin: 0;
+  margin-right: 141px;
 
   @media (min-width: variables.$tablet-width) {
+    margin-left: 0;
     margin-right: 27px;
     min-width: 113px;
   }
