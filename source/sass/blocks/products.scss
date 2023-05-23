@@ -459,9 +459,7 @@
   content: "";
   background-image: url("../img/catalog-background-cat-mobile.png");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-color: #7ec256;
+  background-size: cover;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -474,7 +472,6 @@
 
   @media (min-width: variables.$tablet-width) {
     background-image: url("../img/catalog-background-cat-tablet.png");
-    background-color: #79bd51;
   }
 
   @media (min-width: variables.$tablet-width) and (min-resolution: 2dppx) {
