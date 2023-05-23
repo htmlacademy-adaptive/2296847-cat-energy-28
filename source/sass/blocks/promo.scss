@@ -12,17 +12,18 @@
 
 .promo::before {
   content: "";
-  background-image: linear-gradient(variables.$bg-alt, variables.$bg-alt), url("../img/index-background-mobile.jpg");
+  background-image: url("../img/index-background-mobile.png");
+  background-color: #64a83d;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   position: absolute;
   width: 100%;
   min-height: 302px;
   z-index: -1;
 
   @media (min-resolution: 2dppx) {
-    background-image: linear-gradient(variables.$bg-alt, variables.$bg-alt), url("../img/index-background-mobile-2x.jpg");
+    background-image: url("../img/index-background-mobile-2x.png");
   }
 
   @media (min-width: variables.$tablet-width) {

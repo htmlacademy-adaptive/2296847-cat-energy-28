@@ -457,9 +457,11 @@
 
 .products__promotion::after {
   content: "";
-  background-image: linear-gradient(variables.$bg-alt, variables.$bg-alt), url("../img/catalog-background-cat-mobile.jpg");
+  background-image: url("../img/catalog-background-cat-mobile.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center;
+  background-size: contain;
+  background-color: #7ec256;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -467,23 +469,24 @@
   z-index: -1;
 
   @media (min-resolution: 2dppx) {
-    background-image: linear-gradient(variables.$bg-alt, variables.$bg-alt), url("../img/catalog-background-cat-mobile-2x.jpg");
+    background-image: url("../img/catalog-background-cat-mobile-2x.png");
   }
 
   @media (min-width: variables.$tablet-width) {
-    background-image: linear-gradient(variables.$bg-alt, variables.$bg-alt), url("../img/catalog-background-cat-tablet.jpg");
+    background-image: url("../img/catalog-background-cat-tablet.png");
+    background-color: #79bd51;
   }
 
   @media (min-width: variables.$tablet-width) and (min-resolution: 2dppx) {
-    background-image: linear-gradient(variables.$bg-alt, variables.$bg-alt), url("../img/catalog-background-cat-tablet-2x.jpg");
+    background-image: url("../img/catalog-background-cat-tablet-2x.png");
   }
 
   @media (min-width: variables.$desktop-width) {
-    background-image: linear-gradient(variables.$bg-alt, variables.$bg-alt), url("../img/catalog-background-cat-desktop.jpg");
+    background-image: url("../img/catalog-background-cat-desktop.png");
   }
 
   @media (min-width: variables.$desktop-width) and (min-resolution: 2dppx) {
-    background-image: linear-gradient(variables.$bg-alt, variables.$bg-alt), url("../img/catalog-background-cat-desktop-2x.jpg");
+    background-image: url("../img/catalog-background-cat-desktop-2x.png");
   }
 }
 
