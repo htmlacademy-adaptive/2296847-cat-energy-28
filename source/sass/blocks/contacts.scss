@@ -104,12 +104,24 @@
   background-size: contain;
   background-position: center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/maps/map-mobile@2x.jpg");
+  }
+
   @media (min-width: variables.$tablet-width) {
     height: 400px;
     background-image: url("../img/maps/map-tablet.jpg");
   }
 
+  @media (min-width: variables.$tablet-width) and (min-resolution: 2dppx) {
+    background-image: url("../img/maps/map-tablet@2x.jpg");
+  }
+
   @media (min-width: variables.$desktop-width) {
     background-image: url("../img/maps/map-desktop.jpg");
+  }
+
+  @media (min-width: variables.$desktop-width) and (min-resolution: 2dppx) {
+    background-image: url("../img/maps/map-desktop@2x.jpg");
   }
 }
