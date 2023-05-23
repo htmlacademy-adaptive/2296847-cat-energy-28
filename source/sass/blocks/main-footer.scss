@@ -1,28 +1,68 @@
 @use "../mixins.scss";
 @use "../variables.scss";
 
-.main-footer__wrapper {
+.main-footer {
   background-color: variables.$bg;
-  display: flex;
-  flex-direction: column;
+  min-width: 320px;
 }
 
-@media (min-width: variables.$tablet-width) {
-  .main-footer__wrapper {
+.main-footer__wrapper {
+  background-color: variables.$bg;
+  background-size: 100vw;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: variables.$tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    padding: 56px 30px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 68px 110px;
+    max-width: 1440px;
   }
 }
 
 .main-footer__logo {
   text-align: center;
   padding-top: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 16px;
   width: 100%;
   border-bottom: 1px solid variables.$borders-extra;
 
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (min-width: variables.$tablet-width) {
     text-align: left;
+    padding: 0;
+    border: none;
+    width: 168px;
+    display: flex;
+  }
+}
+
+.main-footer__logo img {
+  &:hover,
+  &:focus {
+    fill: variables.$logo-hover;
+  }
+
+  &:active {
+    fill: variables.$logo-active;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    width: 143px;
+    height: 27px;
+    align-self: center;
   }
 }
 
@@ -33,22 +73,52 @@
 .main-footer__copyright {
   text-decoration: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding-top: 28px;
+  justify-content: center;
+  padding-top: 20px;
   padding-bottom: 47px;
+  border-top: 1px solid variables.$borders-extra;
+
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0;
+    border: none;
+  }
+}
+
+.main-footer__academy-logo {
+  position: relative;
+}
+
+.main-footer__academy-logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 27px;
+  height: 34px;
+  mask: url("../img/academy-logo.svg") no-repeat 50% 50%;
+}
+
+.main-footer__copyright:hover .main-footer__academy-logo::before {
+  background-color: variables.$buttons;
 }
 
 .main-footer__academy-text {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: variables.$text;
   margin: 0;
+  margin-right: 141px;
 
   @media (min-width: variables.$tablet-width) {
+    margin-left: 0;
     margin-right: 27px;
     min-width: 113px;
   }

@@ -1,28 +1,25 @@
-//Миксины и переменные
-@use "./mixins.scss";
-@use "./variables.scss";
 
 // Базовые стили
-@use "./base/base.scss";
-@use "./base/fonts.scss";
+@use "base/base.scss";
+@use "base/fonts.scss";
 
 
 // Стили общих блоков и блоков главной страницы
-@use "./blocks/main-container.scss";
-@use "./blocks/main-header.scss";
-@use "./blocks/site-list.scss";
-@use "./blocks/promo.scss";
-@use "./blocks/programs.scss";
-@use "./blocks/advantages.scss";
-@use "./blocks/stats.scss";
-@use "./blocks/main-footer.scss";
-@use "./blocks/contacts.scss";
-@use "./blocks/social.scss";
+@use "blocks/main-container.scss";
+@use "blocks/main-header.scss";
+@use "blocks/site-list.scss";
+@use "blocks/promo.scss";
+@use "blocks/programs.scss";
+@use "blocks/advantages.scss";
+@use "blocks/stats.scss";
+@use "blocks/main-footer.scss";
+@use "blocks/contacts.scss";
+@use "blocks/social.scss";
 
 // Стили каталога
-@use "./blocks/products.scss";
-@use "./blocks/show-more.scss";
+@use "blocks/products.scss";
+@use "blocks/show-more.scss";
 
 // Стили формы
-@use "./blocks/program-selection.scss";
-@use "./blocks/form.scss";
+@use "blocks/program-selection.scss";
+@use "blocks/form.scss";

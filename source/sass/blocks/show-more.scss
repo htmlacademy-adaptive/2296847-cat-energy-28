@@ -13,6 +13,7 @@
   @media (min-width: variables.$tablet-width) {
     padding: 37px;
     border: 2px solid variables.$bg;
+    justify-content: start;
   }
 }
 
@@ -34,7 +35,7 @@
   display: block;
   width: 30px;
   height: 30px;
-  background-image: url("../../img/plus.svg");
+  background-image: url("../img/stack.svg#plus");
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 23px;
@@ -42,12 +43,15 @@
   @media (min-width: variables.$tablet-width) {
     width: 60px;
     height: 60px;
+    background-size: contain;
+    margin-top: 14px;
     margin-bottom: 49px;
+    background-image: url("../img/stack.svg#plus-tablet");
   }
 }
 
 .show-more__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -67,7 +71,7 @@
 }
 
 .show-more__description {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -81,6 +85,7 @@
     font-size: 16px;
     line-height: 1.12;
     width: 165px;
+    padding-bottom: 87px;
   }
 }
 
@@ -92,4 +97,14 @@
   line-height: 1.25;
   padding: 10px 0;
   width: 100%;
+
+  &:hover,
+  &:focus {
+    background-color: variables.$buttons-hover-extra;
+  }
+
+  &:active {
+    background-color: variables.$buttons-hover-extra;
+    color: variables.$buttons-active;
+  }
 }

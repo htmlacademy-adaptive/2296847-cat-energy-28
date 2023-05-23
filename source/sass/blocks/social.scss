@@ -2,11 +2,59 @@
 @use "../variables.scss";
 
 .social {
+  @include mixins.list-reset;
   display: flex;
-  width: 100%;
-  border-bottom: 1px solid variables.$borders-extra;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  width: 129px;
+  padding-top: 21px;
+  padding-bottom: 21px;
 
   @media (min-width: variables.$tablet-width) {
     border: none;
+    padding: 0;
   }
+}
+
+.social__item {
+  width: 28px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.social__link {
+  display: block;
+  background-color: variables.$divider;
+
+  &:hover,
+  &:focus {
+    background-color: variables.$buttons;
+  }
+
+  &:active {
+    background-color: variables.$buttons;
+    opacity: 0.3;
+  }
+}
+
+.social__link--vkontakte {
+  width: 27px;
+  height: 17px;
+  mask: url("../img/stack.svg#vk") no-repeat 50% 50%;
+}
+
+.social__link--youtube {
+  width: 24px;
+  height: 19px;
+  mask: url("../img/stack.svg#youtube") no-repeat 50% 50%;
+}
+
+.social__link--telegram {
+  width: 20px;
+  height: 18px;
+  mask: url("../img/stack.svg#telegram") no-repeat 50% 50%;
 }
