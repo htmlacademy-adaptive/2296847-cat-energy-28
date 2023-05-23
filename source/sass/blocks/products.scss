@@ -104,7 +104,7 @@
     grid-template-columns: 1fr 1fr;
     background-color: variables.$bg;
     padding: 39px;
-    padding-top: 161px;
+    padding-top: 26px;
     min-height: 430px;
   }
 }
@@ -118,19 +118,29 @@
 
   @media (min-width: variables.$tablet-width) {
     grid-column: 1/-1;
-    position: absolute;
-    bottom: 198px;
-    width: 324px;
-    min-height: 208px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    grid-row: 1/2;
+    position: relative;
+    width: 246px;
+    height: 142px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    bottom: 206px;
+    width: 167px;
   }
 }
+
+.products__image img {
+  @media (min-width: variables.$tablet-width) {
+    position: absolute;
+    left: calc(50% - 84px);
+    bottom: 40px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    bottom: 50px;
+  }
+}
+
 
 @media (max-width: variables.$mobile-width-only) {
   .products__card::before {
@@ -210,7 +220,7 @@
     align-self: center;
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: variables.$desktop-width) {
     line-height: 21px;
     padding-left: 10px;
   }
@@ -223,11 +233,11 @@
 
   @media (min-width: variables.$tablet-width) {
     margin-right: auto;
+    text-align: left;
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: variables.$desktop-width) {
     margin-right: 0;
-    text-align: left;
     padding: 0;
     min-width: 325px;
   }
@@ -429,6 +439,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 33px;
+  padding-bottom: 15px;
 
   @media (min-width: variables.$tablet-width) {
     flex-direction: row;

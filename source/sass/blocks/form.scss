@@ -254,6 +254,7 @@
   color: variables.$titles-extra;
   padding-left: 45px;
   cursor: pointer;
+  width: 280px;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 20px;

@@ -8,13 +8,14 @@
   @media (min-width: variables.$tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    column-gap: 34px;
     min-width: 440px;
     margin: 0 auto;
   }
 
   @media (min-width: variables.$desktop-width) {
     min-width: 478px;
+    max-width: 610px;
     padding-top: 51px;
   }
 }

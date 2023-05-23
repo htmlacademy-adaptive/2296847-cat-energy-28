@@ -61,7 +61,7 @@
   flex-direction: column;
 
   @media (min-width: variables.$tablet-width) {
-    justify-content: space-between;
+    row-gap: 18px;
     width: 170px;
     justify-self: end;
     margin-top: -4px;
@@ -99,17 +99,17 @@
   border: 0;
   width: 100vw;
   min-width: 320px;
-  background-image: url("../img/map-mobile.jpg");
+  background-image: url("../img/maps/map-mobile.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 
   @media (min-width: variables.$tablet-width) {
     height: 400px;
-    background-image: url("../img/map-tablet.jpg");
+    background-image: url("../img/maps/map-tablet.jpg");
   }
 
   @media (min-width: variables.$desktop-width) {
-    background-image: url("../img/map-desktop.jpg");
+    background-image: url("../img/maps/map-desktop.jpg");
   }
 }
