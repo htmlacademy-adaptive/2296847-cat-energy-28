@@ -48,7 +48,8 @@ const scripts = () => {
 const optimizeImages = () => {
   return gulp.src([
     'source/img/*.{png,jpg}',
-    'source/img/products/*.{png,jpg}'
+    'source/img/products/*.{png,jpg}',
+    'source/img/maps/*.{png,jpg}'
   ],{
     base: 'source'
   })
