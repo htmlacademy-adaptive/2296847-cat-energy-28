@@ -111,8 +111,9 @@
   color: variables.$text;
   width: 100%;
   padding: 12px 18px 7px 20px;
-  border: 1px solid variables.$borders-inputs;
+  outline: 1px solid variables.$borders-inputs;
   cursor: pointer;
+  border: none;
 
   @media (min-width: variables.$tablet-width) {
     padding: 11px 20px 11px 20px;
@@ -121,12 +122,13 @@
   }
 
   &:hover {
-    border: 1px solid variables.$borders-alt;
+    outline: 1px solid variables.$borders-alt;
+    border: none;
   }
 
   &:focus {
-    border: 2px solid variables.$text;
-    outline: none;
+    outline: 2px solid variables.$text;
+    border: none;
   }
 
   &--invalid {
@@ -219,7 +221,7 @@
 }
 
 .form__radio-input:focus + span {
-  border: 1px solid variables.$borders-hover;
+  border: 1px solid variables.$buttons;
 }
 
 .form__radio-input:active + span {
@@ -574,7 +576,7 @@
 }
 
 .form__checkbox-input:focus + span {
-  border: 1px solid variables.$borders-hover;
+  border: 1px solid variables.$buttons;
 }
 
 .form__checkbox-input:disabled ~ span {
