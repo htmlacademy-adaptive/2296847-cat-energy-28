@@ -46,6 +46,7 @@
     row-gap: 37px;
     column-gap: 60px;
     padding-bottom: 0;
+    counter-reset: none;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -65,6 +66,7 @@
     gap: 31px;
     position: relative;
     min-height: 280px;
+    counter-increment: line;
   }
 }
 
@@ -121,26 +123,7 @@
     font-size: 280px;
     line-height: 1;
     color: variables.$bg;
-  }
-
-  .advantages__item--leaf::after {
-    content: "1";
-    left: 118px;
-  }
-
-  .advantages__item--powder::after {
-    content: "2";
-    left: 112px;
-  }
-
-  .advantages__item--eat::after {
-    content: "3";
-    left: 112px;
-  }
-
-  .advantages__item--timer::after {
-    content: "4";
-    left: 112px;
+    content: counter(line);
   }
 }
 
