@@ -11,10 +11,11 @@
     bottom: 0;
     width: calc(50%);
     background-image: url("../img/index-background-desktop.png");
+    background-position: left bottom;
     background-color: #62a53a;
     background-repeat: no-repeat;
-    background-size: contain;
-    height: 694px;
+    background-size: 1044px auto;
+    height: 696px;
   }
 
   @media (min-width: variables.$desktop-width) and (min-resolution: 2dppx) {
